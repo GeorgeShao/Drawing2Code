@@ -29,7 +29,20 @@ def draw_toolbar_dividers():
         arcade.draw_line(0, i, 100, i, arcade.color.BLACK)
 
 def draw_toolbar_shapes():
-    pass
+    # Draw square
+    arcade.draw_rectangle_filled(25, 775, 25, 25, arcade.color.BLUE)
+
+    # Draw rectangle
+    arcade.draw_rectangle_filled(25, 725, 35, 15, arcade.color.BLUE)
+
+    # Draw circle
+    arcade.draw_circle_filled(25, 675, 13, arcade.color.BLUE)
+
+    # Draw ellipse
+    arcade.draw_ellipse_filled(25, 625, 18, 8, arcade.color.BLUE)
+
+    # Draw triangle
+    arcade.draw_triangle_filled(25, 590, 10, 560, 40, 560, arcade.color.BLUE)
 
 def on_key_press(key, modifiers):
     pass
@@ -46,7 +59,7 @@ def on_mouse_press(x, y, button, modifiers):
 def setup():
     arcade.open_window(WIDTH, HEIGHT, "PyArcadePaint")
     arcade.set_background_color(arcade.color.WHITE)
-    arcade.schedule(on_update, 1/200)
+    arcade.schedule(on_update, 1/250)
 
     # Override arcade window methods
     window = arcade.get_window()
