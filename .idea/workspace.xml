@@ -11,13 +11,35 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+            <state relative-caret-position="291">
+              <caret line="220" column="12" lean-forward="true" selection-start-line="220" selection-start-column="12" selection-end-line="220" selection-end-column="12" />
+              <folding>
+                <element signature="e#169#173#0" />
+                <element signature="e#333#967#0" />
+                <element signature="e#1001#2129#0" />
+                <element signature="e#2163#3552#0" />
+                <element signature="e#3593#3597#0" />
+                <element signature="e#3640#3644#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,7 +103,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ics2o1-201819-GeorgeShao" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -140,7 +162,7 @@
       <workItem from="1558108956379" duration="347000" />
       <workItem from="1558460502552" duration="2860000" />
       <workItem from="1558542094775" duration="1106000" />
-      <workItem from="1558879502580" duration="2463000" />
+      <workItem from="1558879502580" duration="3148000" />
     </task>
     <task id="LOCAL-00001" summary="Added 5 basic shapes to the toolbar.">
       <created>1557975596473</created>
@@ -156,22 +178,29 @@
       <option name="project" value="LOCAL" />
       <updated>1558542759980</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added drawing rectangles functionality">
+      <created>1558881999998</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558881999998</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9877000" />
+    <option name="totallyTimeSpent" value="10562000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985465" visible="true" weight="0.26599148" />
+      <window_info id="Structure" order="1" sideWeight="0.50145346" side_tool="true" weight="0.26599148" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25136018" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25136018" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -187,8 +216,8 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32995737" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,16 +226,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added 5 basic shapes to the toolbar." />
     <MESSAGE value="Lots of changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Lots of changes." />
+    <MESSAGE value="Added drawing rectangles functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added drawing rectangles functionality" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PyArcadePaint$PyArcadePaint.coverage" NAME="PyArcadePaint Coverage Results" MODIFIED="1558881928940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyArcadePaint$PyArcadePaint.coverage" NAME="PyArcadePaint Coverage Results" MODIFIED="1558882490937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        <state relative-caret-position="291">
+          <caret line="220" column="12" lean-forward="true" selection-start-line="220" selection-start-column="12" selection-end-line="220" selection-end-column="12" />
+          <folding>
+            <element signature="e#169#173#0" />
+            <element signature="e#333#967#0" />
+            <element signature="e#1001#2129#0" />
+            <element signature="e#2163#3552#0" />
+            <element signature="e#3593#3597#0" />
+            <element signature="e#3640#3644#0" />
+          </folding>
         </state>
       </provider>
     </entry>
