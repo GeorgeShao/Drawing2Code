@@ -1,13 +1,44 @@
 import arcade
 
-
+# Window width & height
 WIDTH = 900
 HEIGHT = 800
 
+# Chosen color & shape row & column variables
 chosen_color_row = ""
 chosen_color_column = ""
 chosen_shape_row = ""
 chosen_shape_column = ""
+
+# In-the-moment drawing variables
+currently_drawing = False
+start_x = 0
+start_y = 0
+end_x = 0
+end_y = 0
+
+# Shape object arrays
+rectangles = []
+
+
+class Rectangle:
+    def __init__(self, x, y, x1, y1):
+        self.x = x
+        self.y = y
+        self.x1 = x1
+        self.y1 = y1
+
+    def draw_shape(self):
+        if self.x <= self.x1:
+            if self.y <= self.y1:
+                arcade.draw_lrtb_rectangle_outline(self.x, self.x1, self.y1, self.y, arcade.color.BLUE)
+            elif self.y1 < self.y:
+                arcade.draw_lrtb_rectangle_outline(self.x, self.x1, self.y, self.y1, arcade.color.BLUE)
+        elif self.x1 < self.x:
+            if self.y <= self.y1:
+                arcade.draw_lrtb_rectangle_outline(self.x1, self.x, self.y1, self.y, arcade.color.BLUE)
+            elif self.y1 < self.y:
+                arcade.draw_lrtb_rectangle_outline(self.x1, self.x, self.y, self.y1, arcade.color.BLUE)
 
 
 def on_update(delta_time):
@@ -20,6 +51,9 @@ def on_draw():
     draw_toolbar_dividers()
     draw_toolbar_shapes()
     draw_toolbar_colors()
+
+    for i in range(len(rectangles)):
+        Rectangle.draw_shape(rectangles[i])
 
 
 def draw_toolbar_dividers():
@@ -102,6 +136,8 @@ def on_key_release(key, modifiers):
 
 def on_mouse_press(x, y, button, modifiers):
     global chosen_color_column, chosen_shape_column, chosen_color_row, chosen_shape_row
+    global currently_drawing, start_x, start_y, end_x, end_y
+    global rectangles
 
     # choosing color & shape row * column
     if y >= 350:
@@ -117,10 +153,6 @@ def on_mouse_press(x, y, button, modifiers):
                     chosen_shape_row = i
                     chosen_shape_column = 2
                     break
-        print("")
-        print("Color: " + str(chosen_color_column) + "/" + str(chosen_color_row))
-        print("Shape: " + str(chosen_shape_column) + "/" + str(chosen_shape_row))
-
     elif y <= 350:
         if x <= 50:
             for i in range(0, 450, 50):
@@ -134,15 +166,31 @@ def on_mouse_press(x, y, button, modifiers):
                     chosen_color_row = i
                     chosen_color_column = 2
                     break
-        print("")
+
+    if x <= 100:
         print("Color: " + str(chosen_color_column) + "/" + str(chosen_color_row))
         print("Shape: " + str(chosen_shape_column) + "/" + str(chosen_shape_row))
 
+    if x > 100:
+        currently_drawing = True
+        start_x = x
+        start_y = y
+        print("Mouse Clicked")
+
+
+def on_mouse_release(x, y, button, modifiers):
+    global currently_drawing, start_x, start_y, end_x, end_y, rectangles
+    if x > 100:
+        currently_drawing = False
+        end_x = x
+        end_y = y
+        rectangles.append(Rectangle(start_x, start_y, end_x, end_y))
+        print("Mouse Released")
 
 def setup():
     arcade.open_window(WIDTH, HEIGHT, "PyArcadePaint")
     arcade.set_background_color(arcade.color.WHITE)
-    arcade.schedule(on_update, 1/250)
+    arcade.schedule(on_update, 1/60)
 
     # Override arcade window methods
     window = arcade.get_window()
@@ -150,6 +198,7 @@ def setup():
     window.on_key_press = on_key_press
     window.on_key_release = on_key_release
     window.on_mouse_press = on_mouse_press
+    window.on_mouse_release = on_mouse_release
 
     arcade.run()
 
