@@ -1,4 +1,4 @@
 # PyArcadePaint
 
 **Development State:**
-Unfinished, may be completed.
+Unfinished, work in progress.
