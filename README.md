@@ -1,4 +1,4 @@
 # PyArcadePaint
 
 **Development State:**
-Unfinished, work in progress.
+Unable to be completed due to the PyArcade library's performance issues.
