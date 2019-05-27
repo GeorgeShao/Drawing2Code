@@ -17,11 +17,19 @@ start_y = 0
 end_x = 0
 end_y = 0
 
-# Shape object arrays
+# Shape object lists
 rectangles_filled = []
 rectangles_outline = []
 circle_filled = []
 circle_outline = []
+ellipse_filled = []
+ellipse_outline = []
+triangle_filled = []
+triangle_outline = []
+arc_top_filled = []
+arc_top_outline = []
+arc_bottom_filled = []
+arc_bottom_outline = []
 
 
 class RectangleFilled:
@@ -101,6 +109,103 @@ class CircleOutline:
 
         arcade.draw_circle_outline(self.x, self.y, radius, self.color)
 
+
+class EllipseFilled:
+    def __init__(self, x, y, x1, y1, color):
+        self.x = x
+        self.y = y
+        self.x1 = x1
+        self.y1 = y1
+        self.color = color
+
+    def draw_shape(self):
+        arcade.draw_ellipse_filled(self.x, self.y, int(abs(self.x1-self.x)), int(abs(self.y1-self.y)), self.color)
+
+
+class EllipseOutline:
+    def __init__(self, x, y, x1, y1, color):
+        self.x = x
+        self.y = y
+        self.x1 = x1
+        self.y1 = y1
+        self.color = color
+
+    def draw_shape(self):
+        arcade.draw_ellipse_outline(self.x, self.y, int(abs(self.x1-self.x)), int(abs(self.y1-self.y)), self.color)
+
+
+class TriangleFilled:
+    def __init__(self, x, y, x1, y1, color):
+        self.x = x
+        self.y = y
+        self.x1 = x1
+        self.y1 = y1
+        self.color = color
+
+    def draw_shape(self):
+        arcade.draw_triangle_filled(self.x, self.y, self.x1, self.y1, self.x - (self.x1 - self.x), self.y1, self.color)
+
+
+class TriangleOutline:
+    def __init__(self, x, y, x1, y1, color):
+        self.x = x
+        self.y = y
+        self.x1 = x1
+        self.y1 = y1
+        self.color = color
+
+    def draw_shape(self):
+        arcade.draw_triangle_outline(self.x, self.y, self.x1, self.y1, self.x - (self.x1 - self.x), self.y1, self.color)
+
+
+class ArcTopFilled:
+    def __init__(self, x, y, x1, y1, color):
+        self.x = x
+        self.y = y
+        self.x1 = x1
+        self.y1 = y1
+        self.color = color
+
+    def draw_shape(self):
+        arcade.draw_arc_filled(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 0, 180)
+
+
+class ArcTopOutline:
+    def __init__(self, x, y, x1, y1, color):
+        self.x = x
+        self.y = y
+        self.x1 = x1
+        self.y1 = y1
+        self.color = color
+
+    def draw_shape(self):
+        arcade.draw_arc_outline(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 0, 180)
+
+
+class ArcBottomFilled:
+    def __init__(self, x, y, x1, y1, color):
+        self.x = x
+        self.y = y
+        self.x1 = x1
+        self.y1 = y1
+        self.color = color
+
+    def draw_shape(self):
+        arcade.draw_arc_filled(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 180, 360)
+
+
+class ArcBottomOutline:
+    def __init__(self, x, y, x1, y1, color):
+        self.x = x
+        self.y = y
+        self.x1 = x1
+        self.y1 = y1
+        self.color = color
+
+    def draw_shape(self):
+        arcade.draw_arc_outline(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 180, 360)
+
+
 def on_update(delta_time):
     pass
 
@@ -116,6 +221,23 @@ def on_draw():
         CircleFilled.draw_shape(circle_filled[i])
     for i in range(len(circle_outline)):
         CircleOutline.draw_shape(circle_outline[i])
+    for i in range(len(ellipse_filled)):
+        EllipseFilled.draw_shape(ellipse_filled[i])
+    for i in range(len(ellipse_outline)):
+        EllipseOutline.draw_shape(ellipse_outline[i])
+    for i in range(len(triangle_filled)):
+        TriangleFilled.draw_shape(triangle_filled[i])
+    for i in range(len(triangle_outline)):
+        TriangleOutline.draw_shape(triangle_outline[i])
+    for i in range(len(arc_top_filled)):
+        ArcTopFilled.draw_shape((arc_top_filled[i]))
+    for i in range(len(arc_top_outline)):
+        ArcTopOutline.draw_shape((arc_top_outline[i]))
+    for i in range(len(arc_bottom_filled)):
+        ArcBottomFilled.draw_shape((arc_bottom_filled[i]))
+    for i in range(len(arc_bottom_outline)):
+        ArcBottomOutline.draw_shape((arc_bottom_outline[i]))
+
 
     draw_toolbar_dividers()
     draw_toolbar_shapes()
@@ -242,7 +364,7 @@ def on_mouse_press(x, y, button, modifiers):
 def on_mouse_release(x, y, button, modifiers):
     global chosen_color_column, chosen_shape_column, chosen_color_row, chosen_shape_row, color
     global currently_drawing, start_x, start_y, end_x, end_y
-    global rectangles_filled, rectangles_outline, circle_filled, circle_outline
+    global rectangles_filled, rectangles_outline, circle_filled, circle_outline, ellipse_filled, ellipse_outline, triangle_filled, triangle_outline, arc_top_filled, arc_top_outline, arc_bottom_filled, arc_bottom_outline
 
     if x > 100:
         currently_drawing = False
@@ -294,11 +416,27 @@ def on_mouse_release(x, y, button, modifiers):
                 rectangles_filled.append(RectangleFilled(start_x, start_y, end_x, end_y, color))
             if chosen_shape_row == 14:
                 circle_filled.append(CircleFilled(start_x, start_y, end_x, end_y, color))
+            if chosen_shape_row == 13:
+                ellipse_filled.append(EllipseFilled(start_x, start_y, end_x, end_y, color))
+            if chosen_shape_row == 12:
+                triangle_filled.append(TriangleFilled(start_x, start_y, end_x, end_y, color))
+            if chosen_shape_row == 11:
+                arc_top_filled.append(ArcTopFilled(start_x, start_y, end_x, end_y, color))
+            if chosen_shape_row == 10:
+                arc_bottom_filled.append(ArcBottomFilled(start_x, start_y, end_x, end_y, color))
         if chosen_shape_column == 2:
             if chosen_shape_row == 15:
                 rectangles_outline.append(RectangleOutline(start_x, start_y, end_x, end_y, color))
             if chosen_shape_row == 14:
                 circle_outline.append(CircleOutline(start_x, start_y, end_x, end_y, color))
+            if chosen_shape_row == 13:
+                ellipse_outline.append(EllipseOutline(start_x, start_y, end_x, end_y, color))
+            if chosen_shape_row == 12:
+                triangle_outline.append(TriangleOutline(start_x, start_y, end_x, end_y, color))
+            if chosen_shape_row == 11:
+                arc_top_outline.append(ArcTopOutline(start_x, start_y, end_x, end_y, color))
+            if chosen_shape_row == 10:
+                arc_bottom_outline.append(ArcBottomOutline(start_x, start_y, end_x, end_y, color))
 
 
 def setup():
