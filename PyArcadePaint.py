@@ -202,28 +202,28 @@ def on_mouse_press(x, y, button, modifiers):
     global currently_drawing, start_x, start_y, end_x, end_y
 
     # choosing color & shape row * column
-    if 350 <= y <= 750:
+    if 450 <= y <= 750:
         if x <= 50:
-            for i in range(450, 800, 50):
+            for i in range(500, 800, 50):
                 if y <= i:
                     chosen_shape_row = i/50
                     chosen_shape_column = 1
                     break
         elif x <= 100:
-            for i in range(450, 800, 50):
+            for i in range(500, 800, 50):
                 if y <= i:
                     chosen_shape_row = i/50
                     chosen_shape_column = 2
                     break
-    elif y <= 350:
+    elif y <= 450:
         if x <= 50:
-            for i in range(0, 450, 50):
+            for i in range(0, 500, 50):
                 if y <= i:
                     chosen_color_row = i/50
                     chosen_color_column = 1
                     break
         elif x <= 100:
-            for i in range(0, 450, 50):
+            for i in range(0, 500, 50):
                 if y <= i:
                     chosen_color_row = i/50
                     chosen_color_column = 2
