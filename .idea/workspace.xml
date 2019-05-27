@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="664093bc-4d80-4a1d-aba5-caf5c9593c5a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Exported_Code.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PyArcadePaint.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyArcadePaint.py" afterDir="false" />
     </list>
@@ -30,8 +31,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="211" column="22" lean-forward="true" selection-start-line="211" selection-start-column="22" selection-end-line="211" selection-end-column="22" />
+            <state relative-caret-position="290">
+              <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+              <folding>
+                <element signature="e#615#1987#0" />
+                <element signature="e#2309#3980#0" />
+                <element signature="e#4007#5380#0" />
+                <element signature="e#3166#3455#0" />
+                <element signature="e#3484#3774#0" />
+                <element signature="e#3803#4097#0" />
+                <element signature="e#4127#4422#0" />
+                <element signature="e#4449#4746#0" />
+                <element signature="e#4774#5072#0" />
+                <element signature="e#5102#5401#0" />
+                <element signature="e#5432#5732#0" />
+                <element signature="e#5766#5770#0" />
+                <element signature="e#7762#9070#0" />
+                <element signature="e#7104#7738#0" />
+                <element signature="e#7773#8742#0" />
+                <element signature="e#8776#10165#0" />
+                <element signature="e#10765#10769#0" />
+                <element signature="e#10254#10258#0" />
+                <element signature="e#10309#11625#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,17 +74,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Exported_Code.txt" />
         <option value="$PROJECT_DIR$/PyArcadePaint.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/PyArcadePaint.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
       </list>
     </option>
   </component>
@@ -156,7 +169,11 @@
       <workItem from="1558460502552" duration="2860000" />
       <workItem from="1558542094775" duration="1106000" />
       <workItem from="1558879502580" duration="6978000" />
-      <workItem from="1558978553654" duration="473000" />
+      <workItem from="1558978553654" duration="2762000" />
+      <workItem from="1558991691623" duration="63000" />
+      <workItem from="1558991946262" duration="221000" />
+      <workItem from="1558993611292" duration="6000" />
+      <workItem from="1558993997990" duration="4677000" />
     </task>
     <task id="LOCAL-00001" summary="Added 5 basic shapes to the toolbar.">
       <created>1557975596473</created>
@@ -200,22 +217,36 @@
       <option name="project" value="LOCAL" />
       <updated>1558886333342</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Managed to circumvent PyArcade's performance issues &amp; got shape &amp; color choosing &amp; drawing fully working!">
+      <created>1558979061040</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1558979061040</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added full drawing shape &amp; choosing color functionality! It all works now!">
+      <created>1558981881593</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1558981881593</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14865000" />
+    <option name="totallyTimeSpent" value="22121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985465" visible="true" weight="0.26865673" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985465" visible="true" weight="0.2803838" />
       <window_info id="Structure" order="1" sideWeight="0.50145346" side_tool="true" weight="0.26599148" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25136018" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25136018" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -245,10 +276,12 @@
     <MESSAGE value="Added drawing filled rectangles &amp; outline rectangles functionality." />
     <MESSAGE value="Updated README.md" />
     <MESSAGE value="Added circle &amp; color choosing functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added circle &amp; color choosing functionality." />
+    <MESSAGE value="Managed to circumvent PyArcade's performance issues &amp; got shape &amp; color choosing &amp; drawing fully working!" />
+    <MESSAGE value="Added full drawing shape &amp; choosing color functionality! It all works now!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added full drawing shape &amp; choosing color functionality! It all works now!" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PyArcadePaint$PyArcadePaint.coverage" NAME="PyArcadePaint Coverage Results" MODIFIED="1558978990473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyArcadePaint$PyArcadePaint.coverage" NAME="PyArcadePaint Coverage Results" MODIFIED="1558998241916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -268,10 +301,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Exported_Code.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="211" column="22" lean-forward="true" selection-start-line="211" selection-start-column="22" selection-end-line="211" selection-end-column="22" />
+        <state relative-caret-position="290">
+          <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+          <folding>
+            <element signature="e#615#1987#0" />
+            <element signature="e#2309#3980#0" />
+            <element signature="e#4007#5380#0" />
+            <element signature="e#3166#3455#0" />
+            <element signature="e#3484#3774#0" />
+            <element signature="e#3803#4097#0" />
+            <element signature="e#4127#4422#0" />
+            <element signature="e#4449#4746#0" />
+            <element signature="e#4774#5072#0" />
+            <element signature="e#5102#5401#0" />
+            <element signature="e#5432#5732#0" />
+            <element signature="e#5766#5770#0" />
+            <element signature="e#7762#9070#0" />
+            <element signature="e#7104#7738#0" />
+            <element signature="e#7773#8742#0" />
+            <element signature="e#8776#10165#0" />
+            <element signature="e#10765#10769#0" />
+            <element signature="e#10254#10258#0" />
+            <element signature="e#10309#11625#0" />
+          </folding>
         </state>
       </provider>
     </entry>
