@@ -31,7 +31,6 @@ arc_top_outline = []
 arc_bottom_filled = []
 arc_bottom_outline = []
 
-
 # Shape objects
 class RectangleFilled:
     def __init__(self, x, y, x1, y1, color):
