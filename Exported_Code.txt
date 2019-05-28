@@ -1,1 +1,1 @@
-arcade.draw_circle_filled(359, 396, -50, (255, 165, 0))
+arcade.draw_circle_filled(485, 512, -146, (255, 165, 0))

@@ -585,7 +585,7 @@ def on_mouse_release(x, y, button, modifiers):
         chosen_shape_column = 0
         chosen_shape_row = 0
 
-        pymsgbox.alert('You exported the drawing as Python Arcade code. You can find it in Exported_Code.txt in this project\'s folder. Copy it and put it into an Arcade template, then run it.')
+        pymsgbox.alert(text='You exported the drawing as Python Arcade code in Exported_Code.txt in this project\'s folder. Copy it and put it into an Arcade template, then run it.', title='Successfully Exported!')
 
 
 def setup():
