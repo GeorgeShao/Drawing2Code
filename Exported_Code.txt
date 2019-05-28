@@ -1,1 +1,7 @@
-arcade.draw_lrtb_rectangle_filled(259, 477, 570, 330, (255, 0, 0))
+arcade.draw_circle_filled(387, 441, -357, (255, 255, 0))
+arcade.draw_circle_filled(266, 589, 24, (255, 255, 255))
+arcade.draw_circle_filled(263, 589, 37, (255, 255, 255))
+arcade.draw_circle_filled(519, 590, 35, (255, 255, 255))
+arcade.draw_circle_filled(261, 592, -12, (0, 0, 0))
+arcade.draw_circle_filled(517, 591, -12, (0, 0, 0))
+arcade.draw_ellipse_filled(383, 334, 227, 77, (255, 0, 0))
