@@ -1,5 +1,0 @@
-arcade.draw_lrtb_rectangle_filled(397, 520, 606, 539, (255, 0, 0))
-arcade.draw_lrtb_rectangle_filled(468, 537, 428, 291, (255, 255, 0))
-arcade.draw_lrtb_rectangle_filled(276, 375, 482, 440, (255, 165, 0))
-arcade.draw_lrtb_rectangle_outline(457, 477, 502, 411, (255, 83, 73))
-arcade.draw_lrtb_rectangle_outline(385, 508, 351, 324, (255, 255, 0))
