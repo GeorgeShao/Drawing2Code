@@ -31,8 +31,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="577" column="52" lean-forward="true" selection-start-line="577" selection-start-column="52" selection-end-line="577" selection-end-column="52" />
+            <state relative-caret-position="301">
+              <caret line="561" column="50" lean-forward="true" selection-start-line="561" selection-start-column="50" selection-end-line="561" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,6 +72,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -80,7 +84,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -159,7 +162,8 @@
       <workItem from="1559013073905" duration="45000" />
       <workItem from="1559013172517" duration="104000" />
       <workItem from="1559013349268" duration="8000" />
-      <workItem from="1559059360037" duration="1954000" />
+      <workItem from="1559059360037" duration="3643000" />
+      <workItem from="1559074861462" duration="370000" />
     </task>
     <task id="LOCAL-00001" summary="Added 5 basic shapes to the toolbar.">
       <created>1557975596473</created>
@@ -252,20 +256,33 @@
       <option name="project" value="LOCAL" />
       <updated>1559060548188</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fixed another problem where the code generated from the drawing was increasing the x1 values of each shape by 100.">
+      <created>1559061402184</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1559061402184</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Made a few changes.">
+      <created>1559061810864</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1559061810864</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28974000" />
+    <option name="totallyTimeSpent" value="31033000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985465" visible="true" weight="0.29957357" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985465" visible="true" weight="0.30277187" />
       <window_info id="Structure" order="1" sideWeight="0.50145346" side_tool="true" weight="0.26599148" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25136018" />
@@ -281,6 +298,7 @@
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.3290461" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.3290461" />
+      <window_info anchor="bottom" id="Messages" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -305,11 +323,13 @@
     <MESSAGE value="Added final comments &amp; fixed formatting." />
     <MESSAGE value="Added more comments." />
     <MESSAGE value="Fixed problem where the code generated from the drawing was increasing the x values of each shape by 100." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed problem where the code generated from the drawing was increasing the x values of each shape by 100." />
+    <MESSAGE value="Fixed another problem where the code generated from the drawing was increasing the x1 values of each shape by 100." />
+    <MESSAGE value="Made a few changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a few changes." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PyArcadePaint$test.coverage" NAME="test Coverage Results" MODIFIED="1559001540585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PyArcadePaint$PyArcadePaint.coverage" NAME="PyArcadePaint Coverage Results" MODIFIED="1559061333299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyArcadePaint$PyArcadePaint.coverage" NAME="PyArcadePaint Coverage Results" MODIFIED="1559075258393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -348,8 +368,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="577" column="52" lean-forward="true" selection-start-line="577" selection-start-column="52" selection-end-line="577" selection-end-column="52" />
+        <state relative-caret-position="301">
+          <caret line="561" column="50" lean-forward="true" selection-start-line="561" selection-start-column="50" selection-end-line="561" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

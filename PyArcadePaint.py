@@ -1,4 +1,5 @@
 import arcade
+import pymsgbox
 
 # Window width & height
 WIDTH = 900
@@ -578,6 +579,7 @@ def on_mouse_release(x, y, button, modifiers):
                 writer.write(ArcBottomOutline.create_code(arc_bottom_outline[i]) + "\n")
                 arc_bottom_outline[i].x += 100
                 arc_bottom_outline[i].x1 += 100
+        pymsgbox.alert('You exported the drawing as Python Arcade code. You can find it in Exported_Code.txt in this project\'s folder. Copy it and put it into an Arcade template, then run it.')
 
 
 def setup():
