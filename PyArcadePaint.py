@@ -32,6 +32,7 @@ arc_bottom_filled = []
 arc_bottom_outline = []
 
 
+# Shape objects
 class RectangleFilled:
     def __init__(self, x, y, x1, y1, color):
         self.x = x
@@ -275,6 +276,7 @@ def on_update(delta_time):
 def on_draw():
     arcade.start_render()
 
+    # Renders all the shapes
     for i in range(len(rectangles_filled)):
         RectangleFilled.draw_shape(rectangles_filled[i])
     for i in range(len(rectangles_outline)):
@@ -299,7 +301,6 @@ def on_draw():
         ArcBottomFilled.draw_shape((arc_bottom_filled[i]))
     for i in range(len(arc_bottom_outline)):
         ArcBottomOutline.draw_shape((arc_bottom_outline[i]))
-
 
     draw_toolbar_dividers()
     draw_toolbar_shapes()
@@ -415,10 +416,6 @@ def on_mouse_press(x, y, button, modifiers):
                     chosen_color_column = 2
                     break
 
-    if x <= 100:
-        print("Color: " + str(chosen_color_column) + "/" + str(chosen_color_row))
-        print("Shape: " + str(chosen_shape_column) + "/" + str(chosen_shape_row))
-
     if x > 100:
         currently_drawing = True
         start_x = x
@@ -436,6 +433,7 @@ def on_mouse_release(x, y, button, modifiers):
         end_y = y
         color = None
 
+        # Determines what color user has chosen
         if chosen_color_column == 1:
             if chosen_color_row == 1:
                 color = arcade.color.BLACK
@@ -475,6 +473,7 @@ def on_mouse_release(x, y, button, modifiers):
             if chosen_color_row == 9:
                 color = arcade.color.RED_ORANGE
 
+        # Determines & adds shape to object list
         if chosen_shape_column == 1:
             if chosen_shape_row == 15:
                 rectangles_filled.append(RectangleFilled(start_x, start_y, end_x, end_y, color))
@@ -501,7 +500,9 @@ def on_mouse_release(x, y, button, modifiers):
                 arc_top_outline.append(ArcTopOutline(start_x, start_y, end_x, end_y, color))
             if chosen_shape_row == 10:
                 arc_bottom_outline.append(ArcBottomOutline(start_x, start_y, end_x, end_y, color))
+
     elif x < 100 and 750 < y < 800:
+        # Exports PyArcade python code into Exported_Code.txt file
         with open('Exported_Code.txt', 'w') as writer:
             for i in range(len(rectangles_filled)):
                 writer.write(RectangleFilled.create_code(rectangles_filled[i]) + "\n")
@@ -527,6 +528,7 @@ def on_mouse_release(x, y, button, modifiers):
                 writer.write(ArcBottomFilled.create_code(arc_bottom_filled[i]) + "\n")
             for i in range(len(arc_bottom_outline)):
                 writer.write(ArcBottomOutline.create_code(arc_bottom_outline[i]) + "\n")
+
 
 def setup():
     arcade.open_window(WIDTH, HEIGHT, "PyArcadePaint")

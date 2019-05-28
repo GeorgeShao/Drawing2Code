@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="664093bc-4d80-4a1d-aba5-caf5c9593c5a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exported_Code.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Exported_Code.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PyArcadePaint.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyArcadePaint.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,28 +30,30 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="330" column="69" lean-forward="true" selection-start-line="330" selection-start-column="69" selection-end-line="330" selection-end-column="69" />
+            <state relative-caret-position="408">
+              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding>
-                <element signature="e#615#1987#0" />
+                <element signature="e#615#2278#0" />
                 <element signature="e#2309#3980#0" />
-                <element signature="e#4007#5380#0" />
-                <element signature="e#4865#5700#0" />
-                <element signature="e#5725#6170#0" />
-                <element signature="e#6260#6771#0" />
-                <element signature="e#6797#7313#0" />
-                <element signature="e#7373#7925#0" />
-                <element signature="e#7950#8411#0" />
-                <element signature="e#8500#9027#0" />
-                <element signature="e#9054#9582#0" />
-                <element signature="e#9615#10146#0" />
-                <element signature="e#5766#5770#0" />
-                <element signature="e#7762#9070#0" />
-                <element signature="e#7104#7738#0" />
-                <element signature="e#8776#10165#0" />
-                <element signature="e#10765#10769#0" />
-                <element signature="e#10254#10258#0" />
-                <element signature="e#10309#11625#0" />
+                <element signature="e#4007#4837#0" />
+                <element signature="e#4865#5697#0" />
+                <element signature="e#5725#6231#0" />
+                <element signature="e#6260#6768#0" />
+                <element signature="e#6797#7344#0" />
+                <element signature="e#7374#7923#0" />
+                <element signature="e#7950#8472#0" />
+                <element signature="e#8500#9024#0" />
+                <element signature="e#9054#9580#0" />
+                <element signature="e#9611#10139#0" />
+                <element signature="e#10173#10177#0" />
+                <element signature="e#10199#11475#0" />
+                <element signature="e#11511#12145#0" />
+                <element signature="e#12179#13243#0" />
+                <element signature="e#13277#14666#0" />
+                <element signature="e#14707#14711#0" />
+                <element signature="e#14754#14758#0" />
+                <element signature="e#14810#16126#0" />
+                <element signature="e#16180#21671#0" />
               </folding>
             </state>
           </provider>
@@ -174,7 +175,8 @@
       <workItem from="1558991691623" duration="63000" />
       <workItem from="1558991946262" duration="221000" />
       <workItem from="1558993611292" duration="6000" />
-      <workItem from="1558993997990" duration="7133000" />
+      <workItem from="1558993997990" duration="8436000" />
+      <workItem from="1559011563967" duration="500000" />
     </task>
     <task id="LOCAL-00001" summary="Added 5 basic shapes to the toolbar.">
       <created>1557975596473</created>
@@ -239,22 +241,29 @@
       <option name="project" value="LOCAL" />
       <updated>1558998742077</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added PyArcade automatic code-creating functionality for all shapes &amp; colors via export button at top left corner of screen.">
+      <created>1559001898534</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1559001898534</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24577000" />
+    <option name="totallyTimeSpent" value="26380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985465" visible="true" weight="0.2803838" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985465" visible="true" weight="0.2835821" />
       <window_info id="Structure" order="1" sideWeight="0.50145346" side_tool="true" weight="0.26599148" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25136018" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25136018" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -287,7 +296,8 @@
     <MESSAGE value="Managed to circumvent PyArcade's performance issues &amp; got shape &amp; color choosing &amp; drawing fully working!" />
     <MESSAGE value="Added full drawing shape &amp; choosing color functionality! It all works now!" />
     <MESSAGE value="Added PyArcade code-creating functionality for rectangles and circles." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added PyArcade code-creating functionality for rectangles and circles." />
+    <MESSAGE value="Added PyArcade automatic code-creating functionality for all shapes &amp; colors via export button at top left corner of screen." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added PyArcade automatic code-creating functionality for all shapes &amp; colors via export button at top left corner of screen." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PyArcadePaint$test.coverage" NAME="test Coverage Results" MODIFIED="1559001540585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -311,40 +321,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="75" lean-forward="true" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/Exported_Code.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="330" column="69" lean-forward="true" selection-start-line="330" selection-start-column="69" selection-end-line="330" selection-end-column="69" />
+        <state relative-caret-position="408">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding>
-            <element signature="e#615#1987#0" />
+            <element signature="e#615#2278#0" />
             <element signature="e#2309#3980#0" />
-            <element signature="e#4007#5380#0" />
-            <element signature="e#4865#5700#0" />
-            <element signature="e#5725#6170#0" />
-            <element signature="e#6260#6771#0" />
-            <element signature="e#6797#7313#0" />
-            <element signature="e#7373#7925#0" />
-            <element signature="e#7950#8411#0" />
-            <element signature="e#8500#9027#0" />
-            <element signature="e#9054#9582#0" />
-            <element signature="e#9615#10146#0" />
-            <element signature="e#5766#5770#0" />
-            <element signature="e#7762#9070#0" />
-            <element signature="e#7104#7738#0" />
-            <element signature="e#8776#10165#0" />
-            <element signature="e#10765#10769#0" />
-            <element signature="e#10254#10258#0" />
-            <element signature="e#10309#11625#0" />
+            <element signature="e#4007#4837#0" />
+            <element signature="e#4865#5697#0" />
+            <element signature="e#5725#6231#0" />
+            <element signature="e#6260#6768#0" />
+            <element signature="e#6797#7344#0" />
+            <element signature="e#7374#7923#0" />
+            <element signature="e#7950#8472#0" />
+            <element signature="e#8500#9024#0" />
+            <element signature="e#9054#9580#0" />
+            <element signature="e#9611#10139#0" />
+            <element signature="e#10173#10177#0" />
+            <element signature="e#10199#11475#0" />
+            <element signature="e#11511#12145#0" />
+            <element signature="e#12179#13243#0" />
+            <element signature="e#13277#14666#0" />
+            <element signature="e#14707#14711#0" />
+            <element signature="e#14754#14758#0" />
+            <element signature="e#14810#16126#0" />
+            <element signature="e#16180#21671#0" />
           </folding>
         </state>
       </provider>
