@@ -534,39 +534,51 @@ def on_mouse_release(x, y, button, modifiers):
             for i in range(len(rectangles_filled)):
                 writer.write(RectangleFilled.create_code(rectangles_filled[i]) + "\n")
                 rectangles_filled[i].x += 100
+                rectangles_filled[i].x1 += 100
             for i in range(len(rectangles_outline)):
                 writer.write(RectangleOutline.create_code(rectangles_outline[i]) + "\n")
-                RectangleOutline[i].x += 100
+                rectangles_outline[i].x += 100
+                rectangles_outline[i].x1 += 100
             for i in range(len(circle_filled)):
                 writer.write(CircleFilled.create_code(circle_filled[i]) + "\n")
                 circle_filled[i].x += 100
+                circle_filled[i].x1 += 100
             for i in range(len(circle_outline)):
                 writer.write(CircleOutline.create_code(circle_outline[i]) + "\n")
                 circle_outline[i].x += 100
+                circle_outline[i].x1 += 100
             for i in range(len(ellipse_filled)):
                 writer.write(EllipseFilled.create_code(ellipse_filled[i]) + "\n")
                 ellipse_filled[i].x += 100
+                ellipse_filled[i].x1 += 100
             for i in range(len(ellipse_outline)):
                 writer.write(EllipseOutline.create_code(ellipse_outline[i]) + "\n")
                 ellipse_outline[i].x += 100
+                ellipse_outline[i].x1 += 100
             for i in range(len(triangle_filled)):
                 writer.write(TriangleFilled.create_code(triangle_filled[i]) + "\n")
                 triangle_filled[i].x += 100
+                triangle_filled[i].x1 += 100
             for i in range(len(triangle_outline)):
                 writer.write(TriangleOutline.create_code(triangle_outline[i]) + "\n")
                 triangle_outline[i].x += 100
+                triangle_outline[i].x1 += 100
             for i in range(len(arc_top_filled)):
                 writer.write(ArcTopFilled.create_code(arc_top_filled[i]) + "\n")
                 arc_top_filled[i].x += 100
+                arc_top_filled[i].x1 += 100
             for i in range(len(arc_top_outline)):
                 writer.write(ArcTopOutline.create_code(arc_top_outline[i]) + "\n")
                 arc_top_outline[i].x += 100
+                arc_top_outline[i].x1 += 100
             for i in range(len(arc_bottom_filled)):
                 writer.write(ArcBottomFilled.create_code(arc_bottom_filled[i]) + "\n")
                 arc_bottom_filled[i].x += 100
+                arc_bottom_filled[i].x1 += 100
             for i in range(len(arc_bottom_outline)):
                 writer.write(ArcBottomOutline.create_code(arc_bottom_outline[i]) + "\n")
                 arc_bottom_outline[i].x += 100
+                arc_bottom_outline[i].x1 += 100
 
 
 def setup():
