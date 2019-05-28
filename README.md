@@ -4,4 +4,5 @@
 Finished, may receive future updates.
 
 ## Dependencies
-Arcade python library (http://arcade.academy/) <br/>
+arcade python library (http://arcade.academy/) <br/>
+pymsgbox python library (https://pymsgbox.readthedocs.io/en/latest/basics.html) <br/>
