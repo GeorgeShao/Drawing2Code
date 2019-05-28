@@ -1,1 +1,1 @@
-arcade.draw_circle_filled(485, 512, -146, (255, 165, 0))
+arcade.draw_lrtb_rectangle_filled(259, 477, 570, 330, (255, 0, 0))
