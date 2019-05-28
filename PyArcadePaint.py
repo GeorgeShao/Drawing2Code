@@ -54,6 +54,8 @@ class RectangleFilled:
                 arcade.draw_lrtb_rectangle_filled(self.x1, self.x, self.y, self.y1, self.color)
 
     def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
         if self.x <= self.x1:
             if self.y <= self.y1:
                 return "arcade.draw_lrtb_rectangle_filled(" + str(self.x)+ ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.y) + ", " + str(self.color) + ")"
@@ -87,6 +89,8 @@ class RectangleOutline:
                 arcade.draw_lrtb_rectangle_outline(self.x1, self.x, self.y, self.y1, self.color)
 
     def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
         if self.x <= self.x1:
             if self.y <= self.y1:
                 return "arcade.draw_lrtb_rectangle_outline(" + str(self.x)+ ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.y) + ", " + str(self.color) + ")"
@@ -116,6 +120,8 @@ class CircleFilled:
         arcade.draw_circle_filled(self.x, self.y, radius, self.color)
 
     def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
         radius = 0
         if abs(self.x1 - self.x) >= abs(self.y1 - self.y):
             radius = self.x1 - self.x
@@ -141,6 +147,8 @@ class CircleOutline:
         arcade.draw_circle_outline(self.x, self.y, radius, self.color)
 
     def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
         radius = 0
         if abs(self.x1 - self.x) >= abs(self.y1 - self.y):
             radius = self.x1 - self.x
@@ -161,6 +169,8 @@ class EllipseFilled:
         arcade.draw_ellipse_filled(self.x, self.y, int(abs(self.x1-self.x)), int(abs(self.y1-self.y)), self.color)
 
     def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
         return "arcade.draw_ellipse_filled(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1-self.x))) + ", " + str(int(abs(self.y1-self.y))) + ", " + str(self.color) + ")"
 
 
@@ -176,6 +186,8 @@ class EllipseOutline:
         arcade.draw_ellipse_outline(self.x, self.y, int(abs(self.x1-self.x)), int(abs(self.y1-self.y)), self.color)
 
     def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
         return "arcade.draw_ellipse_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1-self.x))) + ", " + str(int(abs(self.y1-self.y))) + ", " + str(self.color) + ")"
 
 
@@ -191,6 +203,8 @@ class TriangleFilled:
         arcade.draw_triangle_filled(self.x, self.y, self.x1, self.y1, self.x - (self.x1 - self.x), self.y1, self.color)
 
     def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
         return "arcade.draw_triangle_filled(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(int(self.x - (self.x1 - self.x))) + ", " + str(self.y1) + ", " + str(self.color) + ")"
 
 
@@ -206,6 +220,8 @@ class TriangleOutline:
         arcade.draw_triangle_outline(self.x, self.y, self.x1, self.y1, self.x - (self.x1 - self.x), self.y1, self.color)
 
     def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
         return "arcade.draw_triangle_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(int(self.x - (self.x1 - self.x))) + ", " + str(self.y1) + ", " + str(self.color) + ")"
 
 
@@ -221,6 +237,8 @@ class ArcTopFilled:
         arcade.draw_arc_filled(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 0, 180)
 
     def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
         return "arcade.draw_arc_filled(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 0, 180)"
 
 
@@ -236,6 +254,8 @@ class ArcTopOutline:
         arcade.draw_arc_outline(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 0, 180)
 
     def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
         return "arcade.draw_arc_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 0, 180)"
 
 
@@ -251,6 +271,8 @@ class ArcBottomFilled:
         arcade.draw_arc_filled(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 180, 360)
 
     def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
         return "arcade.draw_arc_filled(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 180, 360)"
 
 
@@ -266,6 +288,8 @@ class ArcBottomOutline:
         arcade.draw_arc_outline(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 180, 360)
 
     def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
         return "arcade.draw_arc_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 180, 360)"
 
 
@@ -275,6 +299,8 @@ def on_update(delta_time):
 
 def on_draw():
     arcade.start_render()
+
+    global rectangles_filled, rectangles_outline, circle_filled, circle_outline, ellipse_filled, ellipse_outline, triangle_filled, triangle_outline, arc_top_filled, arc_top_outline, arc_bottom_filled, arc_bottom_outline
 
     # Renders all the shapes
     for i in range(len(rectangles_filled)):
@@ -507,28 +533,40 @@ def on_mouse_release(x, y, button, modifiers):
         with open('Exported_Code.txt', 'w') as writer:
             for i in range(len(rectangles_filled)):
                 writer.write(RectangleFilled.create_code(rectangles_filled[i]) + "\n")
+                rectangles_filled[i].x += 100
             for i in range(len(rectangles_outline)):
                 writer.write(RectangleOutline.create_code(rectangles_outline[i]) + "\n")
+                RectangleOutline[i].x += 100
             for i in range(len(circle_filled)):
                 writer.write(CircleFilled.create_code(circle_filled[i]) + "\n")
+                circle_filled[i].x += 100
             for i in range(len(circle_outline)):
                 writer.write(CircleOutline.create_code(circle_outline[i]) + "\n")
+                circle_outline[i].x += 100
             for i in range(len(ellipse_filled)):
                 writer.write(EllipseFilled.create_code(ellipse_filled[i]) + "\n")
+                ellipse_filled[i].x += 100
             for i in range(len(ellipse_outline)):
                 writer.write(EllipseOutline.create_code(ellipse_outline[i]) + "\n")
+                ellipse_outline[i].x += 100
             for i in range(len(triangle_filled)):
                 writer.write(TriangleFilled.create_code(triangle_filled[i]) + "\n")
+                triangle_filled[i].x += 100
             for i in range(len(triangle_outline)):
                 writer.write(TriangleOutline.create_code(triangle_outline[i]) + "\n")
+                triangle_outline[i].x += 100
             for i in range(len(arc_top_filled)):
                 writer.write(ArcTopFilled.create_code(arc_top_filled[i]) + "\n")
+                arc_top_filled[i].x += 100
             for i in range(len(arc_top_outline)):
                 writer.write(ArcTopOutline.create_code(arc_top_outline[i]) + "\n")
+                arc_top_outline[i].x += 100
             for i in range(len(arc_bottom_filled)):
                 writer.write(ArcBottomFilled.create_code(arc_bottom_filled[i]) + "\n")
+                arc_bottom_filled[i].x += 100
             for i in range(len(arc_bottom_outline)):
                 writer.write(ArcBottomOutline.create_code(arc_bottom_outline[i]) + "\n")
+                arc_bottom_outline[i].x += 100
 
 
 def setup():
