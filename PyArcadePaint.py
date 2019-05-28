@@ -302,6 +302,7 @@ def on_draw():
     for i in range(len(arc_bottom_outline)):
         ArcBottomOutline.draw_shape((arc_bottom_outline[i]))
 
+    # Renders toolbar
     draw_toolbar_dividers()
     draw_toolbar_shapes()
     draw_toolbar_colors()
