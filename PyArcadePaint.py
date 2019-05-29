@@ -31,6 +31,8 @@ arc_top_filled = []
 arc_top_outline = []
 arc_bottom_filled = []
 arc_bottom_outline = []
+line_thick = []
+line_thin = []
 
 # Shape objects
 class RectangleFilled:
@@ -293,6 +295,40 @@ class ArcBottomOutline:
         return "arcade.draw_arc_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 180, 360)"
 
 
+class LineThick:
+    def __init__(self, x, y, x1, y1, color):
+        self.x = x
+        self.y = y
+        self.x1 = x1
+        self.y1 = y1
+        self.color = color
+
+    def draw_shape(self):
+        arcade.draw_line(self.x, self.y, self.x1, self.y1, self.color, line_width=2)
+
+    def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
+        return "arcade.draw_line(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.color) + ", line_width=2)"
+
+
+class LineThin:
+    def __init__(self, x, y, x1, y1, color):
+        self.x = x
+        self.y = y
+        self.x1 = x1
+        self.y1 = y1
+        self.color = color
+
+    def draw_shape(self):
+        arcade.draw_line(self.x, self.y, self.x1, self.y1, self.color, line_width=1)
+
+    def create_code(self):
+        self.x -= 100
+        self.x1 -= 100
+        return "arcade.draw_line(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.color) + ", line_width=1)"
+
+
 def on_update(delta_time):
     pass
 
@@ -300,9 +336,9 @@ def on_update(delta_time):
 def on_draw():
     arcade.start_render()
 
-    global rectangles_filled, rectangles_outline, circle_filled, circle_outline, ellipse_filled, ellipse_outline, triangle_filled, triangle_outline, arc_top_filled, arc_top_outline, arc_bottom_filled, arc_bottom_outline
+    global rectangles_filled, rectangles_outline, circle_filled, circle_outline, ellipse_filled, ellipse_outline, triangle_filled, triangle_outline, arc_top_filled, arc_top_outline, arc_bottom_filled, arc_bottom_outline, line_thick, line_thin
 
-    # Renders all the shapes
+    # Renders all the drawn shapes
     for i in range(len(rectangles_filled)):
         RectangleFilled.draw_shape(rectangles_filled[i])
     for i in range(len(rectangles_outline)):
@@ -320,13 +356,17 @@ def on_draw():
     for i in range(len(triangle_outline)):
         TriangleOutline.draw_shape(triangle_outline[i])
     for i in range(len(arc_top_filled)):
-        ArcTopFilled.draw_shape((arc_top_filled[i]))
+        ArcTopFilled.draw_shape(arc_top_filled[i])
     for i in range(len(arc_top_outline)):
-        ArcTopOutline.draw_shape((arc_top_outline[i]))
+        ArcTopOutline.draw_shape(arc_top_outline[i])
     for i in range(len(arc_bottom_filled)):
-        ArcBottomFilled.draw_shape((arc_bottom_filled[i]))
+        ArcBottomFilled.draw_shape(arc_bottom_filled[i])
     for i in range(len(arc_bottom_outline)):
-        ArcBottomOutline.draw_shape((arc_bottom_outline[i]))
+        ArcBottomOutline.draw_shape(arc_bottom_outline[i])
+    for i in range(len(line_thick)):
+        LineThick.draw_shape(line_thick[i])
+    for i in range(len(line_thin)):
+        LineThin.draw_shape(line_thin[i])
 
     # Renders toolbar
     draw_toolbar_dividers()
@@ -336,7 +376,7 @@ def on_draw():
 
 def draw_toolbar_dividers():
     # Draw toolbar outline
-    arcade.draw_xywh_rectangle_filled(0, 0, 100, 800, arcade.color.TROLLEY_GREY) # background
+    arcade.draw_xywh_rectangle_filled(0, 0, 100, 800, arcade.color.TROLLEY_GREY)  # background
     arcade.draw_line(100, 0, 100, 800, arcade.color.BLACK)  # right border
     arcade.draw_line(1, 1, 1, 800, arcade.color.BLACK)  # left border
     arcade.draw_line(0, 0, 100, 0, arcade.color.BLACK)  # bottom border
@@ -373,6 +413,10 @@ def draw_toolbar_shapes():
     # Draw arc tops (to symbolize arc tops & bottoms)
     arcade.draw_arc_filled(25, 520, 15, 15, arcade.color.BLUE, 0, 180)
     arcade.draw_arc_outline(75, 520, 15, 15, arcade.color.BLUE, 0, 180)
+
+    # Draw lines
+    arcade.draw_line(10, 460, 40, 490, arcade.color.BLUE, line_width=2)
+    arcade.draw_line(60, 460, 90, 490, arcade.color.BLUE, line_width=1)
 
 
 def draw_toolbar_colors():
@@ -448,7 +492,7 @@ def on_mouse_press(x, y, button, modifiers):
 def on_mouse_release(x, y, button, modifiers):
     global chosen_color_column, chosen_shape_column, chosen_color_row, chosen_shape_row, color, history_num
     global currently_drawing, start_x, start_y, end_x, end_y
-    global rectangles_filled, rectangles_outline, circle_filled, circle_outline, ellipse_filled, ellipse_outline, triangle_filled, triangle_outline, arc_top_filled, arc_top_outline, arc_bottom_filled, arc_bottom_outline
+    global rectangles_filled, rectangles_outline, circle_filled, circle_outline, ellipse_filled, ellipse_outline, triangle_filled, triangle_outline, arc_top_filled, arc_top_outline, arc_bottom_filled, arc_bottom_outline, line_thick, line_thin
 
     if x > 100:
         currently_drawing = False
@@ -511,6 +555,8 @@ def on_mouse_release(x, y, button, modifiers):
                     arc_top_filled.append(ArcTopFilled(start_x, start_y, end_x, end_y, color))
                 elif end_y < start_y:
                     arc_bottom_filled.append(ArcBottomFilled(start_x, start_y, end_x, end_y, color))
+            if chosen_shape_row == 10:
+                line_thick.append(LineThick(start_x, start_y, end_x, end_y, color))
 
         if chosen_shape_column == 2:
             if chosen_shape_row == 15:
@@ -526,6 +572,8 @@ def on_mouse_release(x, y, button, modifiers):
                     arc_top_outline.append(ArcTopOutline(start_x, start_y, end_x, end_y, color))
                 elif end_y < start_y:
                     arc_bottom_outline.append(ArcBottomOutline(start_x, start_y, end_x, end_y, color))
+            if chosen_shape_row == 10:
+                line_thin.append(LineThin(start_x, start_y, end_x, end_y, color))
 
 
     elif x < 100 and 750 < y < 800:
@@ -579,6 +627,14 @@ def on_mouse_release(x, y, button, modifiers):
                 writer.write(ArcBottomOutline.create_code(arc_bottom_outline[i]) + "\n")
                 arc_bottom_outline[i].x += 100
                 arc_bottom_outline[i].x1 += 100
+            for i in range(len(line_thick)):
+                writer.write(LineThick.create_code(line_thick[i]) + "\n")
+                line_thick[i].x += 100
+                line_thick[i].x1 += 100
+            for i in range(len(line_thick)):
+                writer.write(LineThin.create_code(line_thin[i]) + "\n")
+                line_thin[i].x += 100
+                line_thin[i].x1 += 100
 
         chosen_color_column = 0
         chosen_color_row = 0
