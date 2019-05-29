@@ -27,23 +27,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="684" column="32" lean-forward="true" selection-start-line="684" selection-start-column="32" selection-end-line="684" selection-end-column="32" />
+            <state relative-caret-position="72">
+              <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#678#2386#0" />
+                <element signature="e#2417#4133#0" />
+                <element signature="e#4160#5035#0" />
+                <element signature="e#5063#5940#0" />
+                <element signature="e#5968#6519#0" />
+                <element signature="e#6548#7101#0" />
+                <element signature="e#7130#7722#0" />
+                <element signature="e#7752#8346#0" />
+                <element signature="e#8373#8940#0" />
+                <element signature="e#8968#9537#0" />
+                <element signature="e#9567#10138#0" />
+                <element signature="e#10169#10742#0" />
+                <element signature="e#10766#11257#0" />
+                <element signature="e#11280#11771#0" />
+                <element signature="e#11831#13558#0" />
+                <element signature="e#13594#14229#0" />
+                <element signature="e#14263#15352#0" />
+                <element signature="e#15386#16775#0" />
+                <element signature="e#16919#18053#0" />
+                <element signature="e#18107#27723#0" />
+                <element signature="e#27743#28172#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Exported_Code.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+            <state relative-caret-position="171">
+              <caret line="37" column="37" lean-forward="true" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -67,8 +88,8 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/PyArcadePaintBeta.py" />
         <option value="$PROJECT_DIR$/Exported_Code.txt" />
-        <option value="$PROJECT_DIR$/PyArcadePaint.py" />
         <option value="$PROJECT_DIR$/Exported_Code.py" />
+        <option value="$PROJECT_DIR$/PyArcadePaint.py" />
       </list>
     </option>
   </component>
@@ -116,7 +137,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Exported_Code">
+  <component name="RunManager" selected="Python.PyArcadePaint">
     <configuration name="Exported_Code" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PyArcadePaint" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -209,7 +230,8 @@
       <workItem from="1559098021270" duration="40000" />
       <workItem from="1559141035343" duration="285000" />
       <workItem from="1559153563854" duration="973000" />
-      <workItem from="1559161944169" duration="843000" />
+      <workItem from="1559161944169" duration="3499000" />
+      <workItem from="1559167870265" duration="710000" />
     </task>
     <task id="LOCAL-00001" summary="Added 5 basic shapes to the toolbar.">
       <created>1557975596473</created>
@@ -414,22 +436,35 @@
       <option name="project" value="LOCAL" />
       <updated>1559162544026</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Made some comment changes.">
+      <created>1559162799675</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1559162799675</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Fixed spacing.">
+      <created>1559163805461</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1559163805461</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39650000" />
+    <option name="totallyTimeSpent" value="43016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985465" visible="true" weight="0.3336887" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985465" visible="true" weight="0.33742005" />
       <window_info id="Structure" order="1" sideWeight="0.50145346" side_tool="true" weight="0.26599148" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30359086" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30359086" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -454,8 +489,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added drawing filled rectangles &amp; outline rectangles functionality." />
-    <MESSAGE value="Updated README.md" />
     <MESSAGE value="Added circle &amp; color choosing functionality." />
     <MESSAGE value="Managed to circumvent PyArcade's performance issues &amp; got shape &amp; color choosing &amp; drawing fully working!" />
     <MESSAGE value="Added full drawing shape &amp; choosing color functionality! It all works now!" />
@@ -479,12 +512,14 @@
     <MESSAGE value="Got entire project fully working with all currently-planned features!" />
     <MESSAGE value="Added automatic arcade template generating functionality to save user's time. (No need to copy &amp; paste arcade template now) Also made the generated code PEP8 compliant." />
     <MESSAGE value="Tested certain functions within PyArcadePaint." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tested certain functions within PyArcadePaint." />
+    <MESSAGE value="Made some comment changes." />
+    <MESSAGE value="Fixed spacing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed spacing." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PyArcadePaint$test.coverage" NAME="test Coverage Results" MODIFIED="1559001540585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PyArcadePaint$PyArcadePaint.coverage" NAME="PyArcadePaint Coverage Results" MODIFIED="1559162379759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PyArcadePaint$Exported_Code.coverage" NAME="Exported_Code Coverage Results" MODIFIED="1559162490844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyArcadePaint$PyArcadePaint.coverage" NAME="PyArcadePaint Coverage Results" MODIFIED="1559169604261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyArcadePaint$Exported_Code.coverage" NAME="Exported_Code Coverage Results" MODIFIED="1559169680630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PyArcadePaint$PyArcadePaintBeta.coverage" NAME="PyArcadePaintBeta Coverage Results" MODIFIED="1559093952715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
@@ -516,20 +551,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
+    <entry file="file://$PROJECT_DIR$/Exported_Code.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="684" column="32" lean-forward="true" selection-start-line="684" selection-start-column="32" selection-end-line="684" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="171">
+          <caret line="37" column="37" lean-forward="true" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exported_Code.py">
+    <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+        <state relative-caret-position="72">
+          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#678#2386#0" />
+            <element signature="e#2417#4133#0" />
+            <element signature="e#4160#5035#0" />
+            <element signature="e#5063#5940#0" />
+            <element signature="e#5968#6519#0" />
+            <element signature="e#6548#7101#0" />
+            <element signature="e#7130#7722#0" />
+            <element signature="e#7752#8346#0" />
+            <element signature="e#8373#8940#0" />
+            <element signature="e#8968#9537#0" />
+            <element signature="e#9567#10138#0" />
+            <element signature="e#10169#10742#0" />
+            <element signature="e#10766#11257#0" />
+            <element signature="e#11280#11771#0" />
+            <element signature="e#11831#13558#0" />
+            <element signature="e#13594#14229#0" />
+            <element signature="e#14263#15352#0" />
+            <element signature="e#15386#16775#0" />
+            <element signature="e#16919#18053#0" />
+            <element signature="e#18107#27723#0" />
+            <element signature="e#27743#28172#0" />
+          </folding>
         </state>
       </provider>
     </entry>
