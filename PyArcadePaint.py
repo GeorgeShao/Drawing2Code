@@ -34,6 +34,7 @@ arc_bottom_outline = []
 line_thick = []
 line_thin = []
 
+
 # Shape objects
 class RectangleFilled:
     def __init__(self, x, y, x1, y1, color):
@@ -304,12 +305,12 @@ class LineThick:
         self.color = color
 
     def draw_shape(self):
-        arcade.draw_line(self.x, self.y, self.x1, self.y1, self.color, line_width=2)
+        arcade.draw_line(self.x, self.y, self.x1, self.y1, self.color, line_width=5)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
-        return "arcade.draw_line(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.color) + ", line_width=2)"
+        return "arcade.draw_line(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.color) + ", line_width=5)"
 
 
 class LineThin:
@@ -321,12 +322,12 @@ class LineThin:
         self.color = color
 
     def draw_shape(self):
-        arcade.draw_line(self.x, self.y, self.x1, self.y1, self.color, line_width=1)
+        arcade.draw_line(self.x, self.y, self.x1, self.y1, self.color, line_width=2)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
-        return "arcade.draw_line(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.color) + ", line_width=1)"
+        return "arcade.draw_line(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.color) + ", line_width=2)"
 
 
 def on_update(delta_time):
