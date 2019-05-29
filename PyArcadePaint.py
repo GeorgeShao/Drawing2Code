@@ -631,7 +631,7 @@ def on_mouse_release(x, y, button, modifiers):
                 writer.write(LineThick.create_code(line_thick[i]) + "\n")
                 line_thick[i].x += 100
                 line_thick[i].x1 += 100
-            for i in range(len(line_thick)):
+            for i in range(len(line_thin)):
                 writer.write(LineThin.create_code(line_thin[i]) + "\n")
                 line_thin[i].x += 100
                 line_thin[i].x1 += 100
