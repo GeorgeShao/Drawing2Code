@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="664093bc-4d80-4a1d-aba5-caf5c9593c5a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exported_Code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Exported_Code.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="449" selection-start-line="449" selection-end-line="449" />
+            <state relative-caret-position="628">
+              <caret line="469" column="43" lean-forward="true" selection-start-line="469" selection-start-column="43" selection-end-line="469" selection-end-column="43" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
                 <element signature="e#678#2386#0" />
@@ -60,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Exported_Code.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+            <state relative-caret-position="216">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -100,6 +99,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -111,13 +111,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ics2o1-201819-GeorgeShao" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
@@ -134,7 +133,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Exported_Code">
+  <component name="RunManager" selected="Python.PyArcadePaint">
     <configuration name="Exported_Code" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PyArcadePaint" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -234,6 +233,13 @@
       <workItem from="1559231655774" duration="3406000" />
       <workItem from="1559249284583" duration="128000" />
       <workItem from="1559256307348" duration="4000" />
+      <workItem from="1559311198357" duration="576000" />
+      <workItem from="1559314291842" duration="6000" />
+      <workItem from="1559325020409" duration="1408000" />
+      <workItem from="1559353095575" duration="154000" />
+      <workItem from="1559415349335" duration="85000" />
+      <workItem from="1559434042797" duration="86000" />
+      <workItem from="1559576772701" duration="368000" />
     </task>
     <task id="LOCAL-00001" summary="Added 5 basic shapes to the toolbar.">
       <created>1557975596473</created>
@@ -466,17 +472,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559225789875</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Fixed spacing.">
+      <created>1559311421650</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1559311421650</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46642000" />
+    <option name="totallyTimeSpent" value="49325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985465" visible="true" weight="0.35607675" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985465" visible="true" weight="0.13486141" />
       <window_info id="Structure" order="1" sideWeight="0.50145346" side_tool="true" weight="0.26599148" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -570,8 +583,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PyArcadePaint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="449" selection-start-line="449" selection-end-line="449" />
+        <state relative-caret-position="628">
+          <caret line="469" column="43" lean-forward="true" selection-start-line="469" selection-start-column="43" selection-end-line="469" selection-end-column="43" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
             <element signature="e#678#2386#0" />
@@ -598,8 +611,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Exported_Code.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        <state relative-caret-position="216">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
