@@ -351,8 +351,8 @@ def setup():
 
     # Shape object lists
     elements = arcade.ShapeElementList()
-    elements.center_x = WIDTH // 2
-    elements.center_y = HEIGHT // 2
+    elements.center_x = 0
+    elements.center_y = 0
     elements.angle = 0
 
     # Override arcade window methods
