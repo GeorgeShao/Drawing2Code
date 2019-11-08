@@ -204,11 +204,11 @@ def on_mouse_release(x, y, button, modifiers):
         # Determines & adds shape to object list
         if chosen_shape_column == 1:
             if chosen_shape_row == 15:
-                elements.append(arcade.create_rectangle_filled((start_x+end_x)//2, (start_y+end_y)//2, start_x+end_x, start_y, color))
+                elements.append(arcade.create_rectangle_filled((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), color))
             if chosen_shape_row == 14:
                 elements.append(arcade.create_ellipse_filled(start_x, start_y, abs(end_x-start_x), abs(end_x-start_x), color))
             if chosen_shape_row == 13:
-                elements.append(arcade.create_ellipse_outline(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), color))
+                elements.append(arcade.create_ellipse_filled(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), color))
             if chosen_shape_row == 12:
                 pass
                 # elements.append(TriangleFilled(start_x, start_y, end_x, end_y, color))
@@ -224,9 +224,9 @@ def on_mouse_release(x, y, button, modifiers):
 
         if chosen_shape_column == 2:
             if chosen_shape_row == 15:
-                elements.append(arcade.create_rectangle_outline((start_x+end_x)//2, (start_y+end_y)//2, start_x+end_x, start_y, color))
+                elements.append(arcade.create_rectangle_outline((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), color))
             if chosen_shape_row == 14:
-                elements.append(arcade.create_ellipse_filled(start_x, start_y, abs(end_x-start_x), abs(end_x-start_x), color))
+                elements.append(arcade.create_ellipse_outline(start_x, start_y, abs(end_x-start_x), abs(end_x-start_x), color))
             if chosen_shape_row == 13:
                 elements.append(arcade.create_ellipse_outline(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), color))
             if chosen_shape_row == 12:
