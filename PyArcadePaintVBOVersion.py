@@ -42,7 +42,7 @@ def get_chosen_color():
             return arcade.color.ORANGE
         if chosen_color_row == 9:
             return arcade.color.RED
-    if chosen_color_column == 2:
+    elif chosen_color_column == 2:
         if chosen_color_row == 1:
             return arcade.color.ASH_GREY
         if chosen_color_row == 2:
@@ -61,6 +61,7 @@ def get_chosen_color():
             return arcade.color.FLUORESCENT_ORANGE
         if chosen_color_row == 9:
             return arcade.color.RED_ORANGE
+    return arcade.color.BLACK
 
 def on_update(delta_time):
     pass
