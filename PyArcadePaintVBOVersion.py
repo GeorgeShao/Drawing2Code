@@ -208,9 +208,6 @@ def on_mouse_press(x, y, button, modifiers):
 
     if x > 100:
         currently_drawing = True
-        if chosen_shape_column == 1:
-            start_x = x
-            start_y = y
 
 
 def on_mouse_release(x, y, button, modifiers):
