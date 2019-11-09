@@ -20,6 +20,7 @@ end_x = 0
 end_y = 0
 
 elements = None
+toolbar = None
 
 def on_update(delta_time):
     pass
@@ -31,6 +32,7 @@ def on_draw():
     # Renders toolbar, all drawn shapes, and export button
     arcade.start_render()
     elements.draw()
+    toolbar.draw()
     arcade.draw_text("EXPORT", 15, 765, color=arcade.color.BLACK, font_size=18)
 
 
@@ -351,11 +353,17 @@ def setup():
     arcade.set_background_color(arcade.color.WHITE)
     arcade.schedule(on_update, 1/60)
 
-    # Shape object lists
+    # Shape shape lists
     elements = arcade.ShapeElementList()
     elements.center_x = 0
     elements.center_y = 0
     elements.angle = 0
+
+    # Toolbar shape lists
+    toolbar = arcade.ShapeElementList()
+    toolbar.center_x = 0
+    toolbar.center_y = 0
+    toolbar.angle = 0
 
     # Override arcade window methods
     window = arcade.get_window()
