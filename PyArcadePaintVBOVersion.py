@@ -18,13 +18,49 @@ start_x = 0
 start_y = 0
 end_x = 0
 end_y = 0
-original_x = 0
-original_y = 0
-current_x = 0
-current_y = 0
 
 elements = None
 toolbar = None
+
+def get_chosen_color():
+    if chosen_color_column == 1:
+        if chosen_color_row == 1:
+            return arcade.color.BLACK
+        if chosen_color_row == 2:
+            return arcade.color.WHITE
+        if chosen_color_row == 3:
+            return arcade.color.VIOLET
+        if chosen_color_row == 4:
+            return arcade.color.PURPLE
+        if chosen_color_row == 5:
+            return  arcade.color.BLUE
+        if chosen_color_row == 6:
+            return arcade.color.GREEN
+        if chosen_color_row == 7:
+            return arcade.color.YELLOW
+        if chosen_color_row == 8:
+            return arcade.color.ORANGE
+        if chosen_color_row == 9:
+            return arcade.color.RED
+    if chosen_color_column == 2:
+        if chosen_color_row == 1:
+            return arcade.color.ASH_GREY
+        if chosen_color_row == 2:
+            return arcade.color.WHITE_SMOKE
+        if chosen_color_row == 3:
+            return arcade.color.BLUE_VIOLET
+        if chosen_color_row == 4:
+            return arcade.color.FUCHSIA_PURPLE
+        if chosen_color_row == 5:
+            return arcade.color.AIR_SUPERIORITY_BLUE
+        if chosen_color_row == 6:
+            return arcade.color.YELLOW_GREEN
+        if chosen_color_row == 7:
+            return arcade.color.FLUORESCENT_YELLOW
+        if chosen_color_row == 8:
+            return arcade.color.FLUORESCENT_ORANGE
+        if chosen_color_row == 9:
+            return arcade.color.RED_ORANGE
 
 def on_update(delta_time):
     pass
@@ -150,8 +186,29 @@ def on_mouse_press(x, y, button, modifiers):
 
     if x > 100:
         currently_drawing = True
-        start_x = x
-        start_y = y
+        if chosen_color_column == 1:
+            start_x = x
+            start_y = y
+        elif chosen_color_column == 2:
+            start_x = x
+            start_y = y
+            end_x = x
+            end_y = y
+            # get color var
+            if chosen_shape_row == 15:
+                line_width = 1
+            if chosen_shape_row == 14:
+                line_width = 2
+            if chosen_shape_row == 13:
+                line_width = 4
+            if chosen_shape_row == 12:
+                line_width = 8
+            if chosen_shape_row == 11:
+                line_width = 16
+            if chosen_shape_row == 10:
+                line_width = 32
+            # elements.append(arcade.create_line(start_x, start_y, end_x, end_y, color=get_chosen_color(), line_width=line_width))
+            elements.append(arcade.create_ellipse_filled(start_x, start_y, line_width, line_width, color=get_chosen_color()))
 
 
 def on_mouse_release(x, y, button, modifiers):
@@ -165,76 +222,22 @@ def on_mouse_release(x, y, button, modifiers):
         end_y = y
         color = None
 
-        # Determines what color user has chosen
-        if chosen_color_column == 1:
-            if chosen_color_row == 1:
-                color = arcade.color.BLACK
-            if chosen_color_row == 2:
-                color = arcade.color.WHITE
-            if chosen_color_row == 3:
-                color = arcade.color.VIOLET
-            if chosen_color_row == 4:
-                color = arcade.color.PURPLE
-            if chosen_color_row == 5:
-                color = arcade.color.BLUE
-            if chosen_color_row == 6:
-                color = arcade.color.GREEN
-            if chosen_color_row == 7:
-                color = arcade.color.YELLOW
-            if chosen_color_row == 8:
-                color = arcade.color.ORANGE
-            if chosen_color_row == 9:
-                color = arcade.color.RED
-        if chosen_color_column == 2:
-            if chosen_color_row == 1:
-                color = arcade.color.ASH_GREY
-            if chosen_color_row == 2:
-                color = arcade.color.WHITE_SMOKE
-            if chosen_color_row == 3:
-                color = arcade.color.BLUE_VIOLET
-            if chosen_color_row == 4:
-                color = arcade.color.FUCHSIA_PURPLE
-            if chosen_color_row == 5:
-                color = arcade.color.AIR_SUPERIORITY_BLUE
-            if chosen_color_row == 6:
-                color = arcade.color.YELLOW_GREEN
-            if chosen_color_row == 7:
-                color = arcade.color.FLUORESCENT_YELLOW
-            if chosen_color_row == 8:
-                color = arcade.color.FLUORESCENT_ORANGE
-            if chosen_color_row == 9:
-                color = arcade.color.RED_ORANGE
-
         # Determines & adds shape to object list
         if chosen_shape_column == 1:
             if chosen_shape_row == 15:
-                elements.append(arcade.create_rectangle_filled((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), color))
+                elements.append(arcade.create_rectangle_filled((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), get_chosen_color()))
             if chosen_shape_row == 14:
                 radius = round(math.sqrt(abs(end_x-start_x)**2 + abs(end_y-start_y)**2))
-                elements.append(arcade.create_ellipse_filled(start_x, start_y, radius, radius, color))
+                elements.append(arcade.create_ellipse_filled(start_x, start_y, radius, radius, get_chosen_color()))
             if chosen_shape_row == 13:
-                elements.append(arcade.create_ellipse_filled(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), color))
+                elements.append(arcade.create_ellipse_filled(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), get_chosen_color()))
             if chosen_shape_row == 12:
-                elements.append(arcade.create_rectangle_outline((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), color))
+                elements.append(arcade.create_rectangle_outline((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), get_chosen_color()))
             if chosen_shape_row == 11:
                 radius = round(math.sqrt(abs(end_x-start_x)**2 + abs(end_y-start_y)**2))
-                elements.append(arcade.create_ellipse_outline(start_x, start_y, radius, radius, color))
+                elements.append(arcade.create_ellipse_outline(start_x, start_y, radius, radius, get_chosen_color()))
             if chosen_shape_row == 10:
-                elements.append(arcade.create_ellipse_outline(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), color))
-
-        if chosen_shape_column == 2:
-            if chosen_shape_row == 15:
-                pass
-            if chosen_shape_row == 14:
-                pass
-            if chosen_shape_row == 13:
-                pass
-            if chosen_shape_row == 12:
-                pass
-            if chosen_shape_row == 11:
-                pass
-            if chosen_shape_row == 10:
-                elements.append(arcade.create_line(start_x, start_y, end_x, end_y, color))
+                elements.append(arcade.create_ellipse_outline(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), get_chosen_color()))
 
     elif x < 100 and 750 < y < 800:
         pass
