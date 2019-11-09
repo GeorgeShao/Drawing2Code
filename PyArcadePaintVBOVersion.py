@@ -1,5 +1,6 @@
 import arcade
 import pymsgbox
+import math
 
 # Window width & height
 WIDTH = 900
@@ -27,9 +28,10 @@ def on_update(delta_time):
 def on_draw():
     global elements
 
-    # Renders all drawn shapes
+    # Renders toolbar, all drawn shapes, and export button
     arcade.start_render()
     elements.draw()
+    arcade.draw_text("EXPORT", 15, 765, color=arcade.color.BLACK, font_size=18)
 
 
 def draw_toolbar_dividers():
@@ -51,8 +53,6 @@ def draw_toolbar_dividers():
 
 def draw_toolbar_shapes():
     global elements
-    # Export button
-    arcade.draw_text("EXPORT", 15, 765, color=arcade.color.BLACK, font_size=18)
 
     # Draw rectangles
     elements.append(arcade.create_rectangle_filled(25, 725, 35, 15, arcade.color.BLUE))
@@ -206,7 +206,8 @@ def on_mouse_release(x, y, button, modifiers):
             if chosen_shape_row == 15:
                 elements.append(arcade.create_rectangle_filled((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), color))
             if chosen_shape_row == 14:
-                elements.append(arcade.create_ellipse_filled(start_x, start_y, abs(end_x-start_x), abs(end_x-start_x), color))
+                radius = round(math.sqrt(abs(end_x-start_x)**2 + abs(end_y-start_y)**2))
+                elements.append(arcade.create_ellipse_filled(start_x, start_y, radius, radius, color))
             if chosen_shape_row == 13:
                 elements.append(arcade.create_ellipse_filled(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), color))
             if chosen_shape_row == 12:
@@ -226,7 +227,8 @@ def on_mouse_release(x, y, button, modifiers):
             if chosen_shape_row == 15:
                 elements.append(arcade.create_rectangle_outline((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), color))
             if chosen_shape_row == 14:
-                elements.append(arcade.create_ellipse_outline(start_x, start_y, abs(end_x-start_x), abs(end_x-start_x), color))
+                radius = round(math.sqrt(abs(end_x-start_x)**2 + abs(end_y-start_y)**2))
+                elements.append(arcade.create_ellipse_outline(start_x, start_y, radius, radius, color))
             if chosen_shape_row == 13:
                 elements.append(arcade.create_ellipse_outline(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), color))
             if chosen_shape_row == 12:
