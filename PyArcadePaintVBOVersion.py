@@ -27,7 +27,7 @@ def on_update(delta_time):
 
 
 def on_draw():
-    global elements
+    global elements, toolbar
 
     # Renders toolbar, all drawn shapes, and export button
     arcade.start_render()
@@ -37,36 +37,37 @@ def on_draw():
 
 
 def draw_toolbar_dividers():
-    global elements
+    global elements, toolbar
+
     # Draw toolbar outline
-    elements.append(arcade.create_rectangle_filled(50, 400, 100, 800, arcade.color.TROLLEY_GREY))  # background
-    elements.append(arcade.create_line(100, 0, 100, 800, arcade.color.BLACK))  # right border
-    elements.append(arcade.create_line(1, 1, 1, 800, arcade.color.BLACK))  # left border
-    elements.append(arcade.create_line(0, 0, 100, 0, arcade.color.BLACK))  # bottom border
-    elements.append(arcade.create_line(1, 799, 100, 799, arcade.color.BLACK))  # top border
+    toolbar.append(arcade.create_rectangle_filled(50, 400, 100, 800, arcade.color.TROLLEY_GREY))  # background
+    toolbar.append(arcade.create_line(100, 0, 100, 800, arcade.color.BLACK))  # right border
+    toolbar.append(arcade.create_line(1, 1, 1, 800, arcade.color.BLACK))  # left border
+    toolbar.append(arcade.create_line(0, 0, 100, 0, arcade.color.BLACK))  # bottom border
+    toolbar.append(arcade.create_line(1, 799, 100, 799, arcade.color.BLACK))  # top border
 
     # Draw toolbar divider
-    elements.append(arcade.create_line(50, 0, 50, 750, arcade.color.BLACK))  # middle divider
+    toolbar.append(arcade.create_line(50, 0, 50, 750, arcade.color.BLACK))  # middle divider
 
     # Draw toolbar mini dividers
     for i in range(0, 800, 50):
-        elements.append(arcade.create_line(0, i, 100, i, arcade.color.BLACK))
+        toolbar.append(arcade.create_line(0, i, 100, i, arcade.color.BLACK))
 
 
 def draw_toolbar_shapes():
-    global elements
+    global elements, toolbar
 
     # Draw rectangles
-    elements.append(arcade.create_rectangle_filled(25, 725, 35, 15, arcade.color.BLUE))
-    elements.append(arcade.create_rectangle_outline(75, 725, 35, 15, arcade.color.BLUE))
+    toolbar.append(arcade.create_rectangle_filled(25, 725, 35, 15, arcade.color.BLUE))
+    toolbar.append(arcade.create_rectangle_outline(25, 575, 35, 15, arcade.color.BLUE))
 
     # Draw circles
-    elements.append(arcade.create_ellipse_filled(25, 675, 13, 13, arcade.color.BLUE))
-    elements.append(arcade.create_ellipse_outline(75, 675, 13, 13, arcade.color.BLUE))
+    toolbar.append(arcade.create_ellipse_filled(25, 675, 13, 13, arcade.color.BLUE))
+    toolbar.append(arcade.create_ellipse_outline(25, 525, 13, 13, arcade.color.BLUE))
 
     # Draw ellipses
-    elements.append(arcade.create_ellipse_filled(25, 625, 18, 8, arcade.color.BLUE))
-    elements.append(arcade.create_ellipse_outline(75, 625, 18, 8, arcade.color.BLUE))
+    toolbar.append(arcade.create_ellipse_filled(25, 625, 18, 8, arcade.color.BLUE))
+    toolbar.append(arcade.create_ellipse_outline(25, 475, 18, 8, arcade.color.BLUE))
 
     # Draw triangles
     # arcade.draw_triangle_filled(25, 590, 10, 560, 40, 560, arcade.color.BLUE)
@@ -77,34 +78,34 @@ def draw_toolbar_shapes():
     # arcade.draw_arc_outline(75, 520, 15, 15, arcade.color.BLUE, 0, 180)
 
     # Draw lines
-    elements.append(arcade.create_line(10, 460, 40, 490, arcade.color.BLUE, line_width=2))
-    elements.append(arcade.create_line(60, 460, 90, 490, arcade.color.BLUE, line_width=1))
+    toolbar.append(arcade.create_line(10, 460, 40, 490, arcade.color.BLUE, line_width=2))
+    toolbar.append(arcade.create_line(60, 460, 90, 490, arcade.color.BLUE, line_width=1))
 
 
 def draw_toolbar_colors():
-    global elements
+    global elements, toolbar
 
     # First column of colors
-    elements.append(arcade.create_rectangle_filled(25, 425, 50, 50, arcade.color.RED))
-    elements.append(arcade.create_rectangle_filled(25, 375, 50, 50, arcade.color.ORANGE))
-    elements.append(arcade.create_rectangle_filled(25, 325, 50, 50, arcade.color.YELLOW))
-    elements.append(arcade.create_rectangle_filled(25, 275, 50, 50, arcade.color.GREEN))
-    elements.append(arcade.create_rectangle_filled(25, 225, 50, 50, arcade.color.BLUE))
-    elements.append(arcade.create_rectangle_filled(25, 175, 50, 50, arcade.color.PURPLE))
-    elements.append(arcade.create_rectangle_filled(25, 125, 50, 50, arcade.color.VIOLET))
-    elements.append(arcade.create_rectangle_filled(25, 75, 50, 50, arcade.color.WHITE))
-    elements.append(arcade.create_rectangle_filled(25, 25, 50, 50, arcade.color.BLACK))
+    toolbar.append(arcade.create_rectangle_filled(25, 425, 50, 50, arcade.color.RED))
+    toolbar.append(arcade.create_rectangle_filled(25, 375, 50, 50, arcade.color.ORANGE))
+    toolbar.append(arcade.create_rectangle_filled(25, 325, 50, 50, arcade.color.YELLOW))
+    toolbar.append(arcade.create_rectangle_filled(25, 275, 50, 50, arcade.color.GREEN))
+    toolbar.append(arcade.create_rectangle_filled(25, 225, 50, 50, arcade.color.BLUE))
+    toolbar.append(arcade.create_rectangle_filled(25, 175, 50, 50, arcade.color.PURPLE))
+    toolbar.append(arcade.create_rectangle_filled(25, 125, 50, 50, arcade.color.VIOLET))
+    toolbar.append(arcade.create_rectangle_filled(25, 75, 50, 50, arcade.color.WHITE))
+    toolbar.append(arcade.create_rectangle_filled(25, 25, 50, 50, arcade.color.BLACK))
 
     # Second column of colors
-    elements.append(arcade.create_rectangle_filled(75, 425, 50, 50, arcade.color.RED_ORANGE))
-    elements.append(arcade.create_rectangle_filled(75, 375, 50, 50, arcade.color.FLUORESCENT_ORANGE))
-    elements.append(arcade.create_rectangle_filled(75, 325, 50, 50, arcade.color.FLUORESCENT_YELLOW))
-    elements.append(arcade.create_rectangle_filled(75, 275, 50, 50, arcade.color.YELLOW_GREEN))
-    elements.append(arcade.create_rectangle_filled(75, 225, 50, 50, arcade.color.AIR_SUPERIORITY_BLUE))
-    elements.append(arcade.create_rectangle_filled(75, 175, 50, 50, arcade.color.FUCHSIA_PURPLE))
-    elements.append(arcade.create_rectangle_filled(75, 125, 50, 50, arcade.color.BLUE_VIOLET))
-    elements.append(arcade.create_rectangle_filled(75, 75, 50, 50, arcade.color.WHITE_SMOKE))
-    elements.append(arcade.create_rectangle_filled(75, 25, 50, 50, arcade.color.ASH_GREY))
+    toolbar.append(arcade.create_rectangle_filled(75, 425, 50, 50, arcade.color.RED_ORANGE))
+    toolbar.append(arcade.create_rectangle_filled(75, 375, 50, 50, arcade.color.FLUORESCENT_ORANGE))
+    toolbar.append(arcade.create_rectangle_filled(75, 325, 50, 50, arcade.color.FLUORESCENT_YELLOW))
+    toolbar.append(arcade.create_rectangle_filled(75, 275, 50, 50, arcade.color.YELLOW_GREEN))
+    toolbar.append(arcade.create_rectangle_filled(75, 225, 50, 50, arcade.color.AIR_SUPERIORITY_BLUE))
+    toolbar.append(arcade.create_rectangle_filled(75, 175, 50, 50, arcade.color.FUCHSIA_PURPLE))
+    toolbar.append(arcade.create_rectangle_filled(75, 125, 50, 50, arcade.color.BLUE_VIOLET))
+    toolbar.append(arcade.create_rectangle_filled(75, 75, 50, 50, arcade.color.WHITE_SMOKE))
+    toolbar.append(arcade.create_rectangle_filled(75, 25, 50, 50, arcade.color.ASH_GREY))
 
 
 def on_key_press(key, modifiers):
@@ -154,7 +155,8 @@ def on_mouse_press(x, y, button, modifiers):
 
 
 def on_mouse_release(x, y, button, modifiers):
-    global chosen_color_column, chosen_shape_column, chosen_color_row, chosen_shape_row, elements
+    global elements, toolbar
+    global chosen_color_column, chosen_shape_column, chosen_color_row, chosen_shape_row
     global currently_drawing, start_x, start_y, end_x, end_y
 
     if x > 100:
@@ -347,7 +349,7 @@ def on_mouse_release(x, y, button, modifiers):
 
 
 def setup():
-    global elements
+    global elements, toolbar
 
     arcade.open_window(WIDTH, HEIGHT, "PyArcadePaint")
     arcade.set_background_color(arcade.color.WHITE)
