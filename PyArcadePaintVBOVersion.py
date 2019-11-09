@@ -18,6 +18,10 @@ start_x = 0
 start_y = 0
 end_x = 0
 end_y = 0
+original_x = 0
+original_y = 0
+current_x = 0
+current_y = 0
 
 elements = None
 toolbar = None
@@ -69,17 +73,13 @@ def draw_toolbar_shapes():
     toolbar.append(arcade.create_ellipse_filled(25, 625, 18, 8, arcade.color.BLUE))
     toolbar.append(arcade.create_ellipse_outline(25, 475, 18, 8, arcade.color.BLUE))
 
-    # Draw triangles
-    # arcade.draw_triangle_filled(25, 590, 10, 560, 40, 560, arcade.color.BLUE)
-    # arcade.draw_triangle_outline(75, 590, 60, 560, 90, 560, arcade.color.BLUE)
-
-    # Draw arc tops (to symbolize arc tops & bottoms)
-    # arcade.draw_arc_filled(25, 520, 15, 15, arcade.color.BLUE, 0, 180)
-    # arcade.draw_arc_outline(75, 520, 15, 15, arcade.color.BLUE, 0, 180)
-
     # Draw lines
-    toolbar.append(arcade.create_line(10, 460, 40, 490, arcade.color.BLUE, line_width=2))
-    toolbar.append(arcade.create_line(60, 460, 90, 490, arcade.color.BLUE, line_width=1))
+    toolbar.append(arcade.create_line(60, 710, 90, 740, arcade.color.BLUE, line_width=1))
+    toolbar.append(arcade.create_line(60, 660, 90, 690, arcade.color.BLUE, line_width=2))
+    toolbar.append(arcade.create_line(60, 610, 90, 640, arcade.color.BLUE, line_width=4))
+    toolbar.append(arcade.create_line(60, 560, 90, 590, arcade.color.BLUE, line_width=8))
+    toolbar.append(arcade.create_line(60, 510, 90, 540, arcade.color.BLUE, line_width=16))
+    toolbar.append(arcade.create_line(60, 460, 90, 490, arcade.color.BLUE, line_width=32))
 
 
 def draw_toolbar_colors():
@@ -215,36 +215,24 @@ def on_mouse_release(x, y, button, modifiers):
             if chosen_shape_row == 13:
                 elements.append(arcade.create_ellipse_filled(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), color))
             if chosen_shape_row == 12:
-                pass
-                # elements.append(TriangleFilled(start_x, start_y, end_x, end_y, color))
+                elements.append(arcade.create_rectangle_outline((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), color))
             if chosen_shape_row == 11:
-                if end_y >= start_y:
-                    pass
-                    # elements.append(ArcTopFilled(start_x, start_y, end_x, end_y, color))
-                elif end_y < start_y:
-                    pass
-                    # elements.append(ArcBottomFilled(start_x, start_y, end_x, end_y, color))
+                radius = round(math.sqrt(abs(end_x-start_x)**2 + abs(end_y-start_y)**2))
+                elements.append(arcade.create_ellipse_outline(start_x, start_y, radius, radius, color))
             if chosen_shape_row == 10:
-                elements.append(arcade.create_line(start_x, start_y, end_x, end_y, color))
+                elements.append(arcade.create_ellipse_outline(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), color))
 
         if chosen_shape_column == 2:
             if chosen_shape_row == 15:
-                elements.append(arcade.create_rectangle_outline((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), color))
+                pass
             if chosen_shape_row == 14:
-                radius = round(math.sqrt(abs(end_x-start_x)**2 + abs(end_y-start_y)**2))
-                elements.append(arcade.create_ellipse_outline(start_x, start_y, radius, radius, color))
+                pass
             if chosen_shape_row == 13:
-                elements.append(arcade.create_ellipse_outline(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), color))
+                pass
             if chosen_shape_row == 12:
                 pass
-                # elements.append(TriangleOutline(start_x, start_y, end_x, end_y, color))
             if chosen_shape_row == 11:
-                if end_y >= start_y:
-                    pass
-                    # elements.append(ArcTopOutline(start_x, start_y, end_x, end_y, color))
-                elif end_y < start_y:
-                    pass
-                    # elements.append(ArcBottomOutline(start_x, start_y, end_x, end_y, color))
+                pass
             if chosen_shape_row == 10:
                 elements.append(arcade.create_line(start_x, start_y, end_x, end_y, color))
 
