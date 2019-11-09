@@ -179,7 +179,7 @@ def on_mouse_press(x, y, button, modifiers):
     global chosen_color_column, chosen_shape_column, chosen_color_row, chosen_shape_row
     global currently_drawing, start_x, start_y, end_x, end_y
 
-    # choosing color & shape row * column
+    # choosing color & shape, row & column
     if 450 <= y <= 750:
         if x <= 50:
             for i in range(500, 800, 50):
@@ -209,6 +209,8 @@ def on_mouse_press(x, y, button, modifiers):
 
     if x > 100:
         currently_drawing = True
+        start_x = x
+        start_y = y
 
 
 def on_mouse_release(x, y, button, modifiers):
@@ -220,8 +222,6 @@ def on_mouse_release(x, y, button, modifiers):
         currently_drawing = False
         end_x = x
         end_y = y
-
-        # Determines & adds shape to object list
         if chosen_shape_column == 1:
             if chosen_shape_row == 15:
                 elements.append(arcade.create_rectangle_filled((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), get_chosen_color()))
