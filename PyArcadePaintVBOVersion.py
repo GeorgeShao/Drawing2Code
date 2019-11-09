@@ -151,6 +151,28 @@ def on_key_press(key, modifiers):
 def on_key_release(key, modifiers):
     pass
 
+def on_mouse_drag(x, y, dx, dy, button, modifiers):
+    if x > 100:
+        currently_drawing = True
+        if chosen_shape_column == 2:
+            start_x = x
+            start_y = y
+            end_x = x + dx
+            end_y = y + dy
+            if chosen_shape_row == 15:
+                drawing_width = 1
+            if chosen_shape_row == 14:
+                drawing_width = 2
+            if chosen_shape_row == 13:
+                drawing_width = 4
+            if chosen_shape_row == 12:
+                drawing_width = 8
+            if chosen_shape_row == 11:
+                drawing_width = 16
+            if chosen_shape_row == 10:
+                drawing_width = 32
+            elements.append(arcade.create_line(start_x, start_y, end_x, end_y, color=get_chosen_color(), line_width=drawing_width))
+            # elements.append(arcade.create_ellipse_filled(start_x, start_y, drawing_width, drawing_width, color=get_chosen_color()))
 
 def on_mouse_press(x, y, button, modifiers):
     global chosen_color_column, chosen_shape_column, chosen_color_row, chosen_shape_row
@@ -186,29 +208,9 @@ def on_mouse_press(x, y, button, modifiers):
 
     if x > 100:
         currently_drawing = True
-        if chosen_color_column == 1:
+        if chosen_shape_column == 1:
             start_x = x
             start_y = y
-        elif chosen_color_column == 2:
-            start_x = x
-            start_y = y
-            end_x = x
-            end_y = y
-            # get color var
-            if chosen_shape_row == 15:
-                line_width = 1
-            if chosen_shape_row == 14:
-                line_width = 2
-            if chosen_shape_row == 13:
-                line_width = 4
-            if chosen_shape_row == 12:
-                line_width = 8
-            if chosen_shape_row == 11:
-                line_width = 16
-            if chosen_shape_row == 10:
-                line_width = 32
-            # elements.append(arcade.create_line(start_x, start_y, end_x, end_y, color=get_chosen_color(), line_width=line_width))
-            elements.append(arcade.create_ellipse_filled(start_x, start_y, line_width, line_width, color=get_chosen_color()))
 
 
 def on_mouse_release(x, y, button, modifiers):
@@ -220,7 +222,6 @@ def on_mouse_release(x, y, button, modifiers):
         currently_drawing = False
         end_x = x
         end_y = y
-        color = None
 
         # Determines & adds shape to object list
         if chosen_shape_column == 1:
@@ -344,7 +345,7 @@ def setup():
 
     arcade.open_window(WIDTH, HEIGHT, "PyArcadePaint")
     arcade.set_background_color(arcade.color.WHITE)
-    arcade.schedule(on_update, 1/60)
+    arcade.schedule(on_update, 1/1000)
 
     # Shape shape lists
     elements = arcade.ShapeElementList()
@@ -365,6 +366,7 @@ def setup():
     window.on_key_release = on_key_release
     window.on_mouse_press = on_mouse_press
     window.on_mouse_release = on_mouse_release
+    window.on_mouse_drag = on_mouse_drag
 
     # Draw toolbar
     draw_toolbar_dividers()
