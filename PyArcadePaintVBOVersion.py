@@ -22,6 +22,8 @@ end_y = 0
 elements = None
 toolbar = None
 
+output_text = []
+
 def get_chosen_color():
     if chosen_color_column == 1:
         if chosen_color_row == 1:
@@ -245,17 +247,20 @@ def on_mouse_release(x, y, button, modifiers):
             writer.write("""import arcade
 WIDTH = 800
 HEIGHT = 800
+elements = None
 def on_update(delta_time):
     pass
 def on_draw():
     arcade.start_render()
+    elements.draw()
     # Drawing code here
-            """)
+""")
 
-            # for i in range(len(line_thin)):
-            #     writer.write("    " + LineThin.create_code(line_thin[i]) + "\n")
-            #     line_thin[i].x += 100
-            #     line_thin[i].x1 += 100
+            for i in range(len(elements)):
+                print(elements[i])
+                # writer.write("    " + (elements[i]) + "\n")
+                # elements[i].x += 100
+                # elements[i].x1 += 100
 
             writer.write("\n \n")
             writer.write("def on_key_press(key, modifiers): \n")
