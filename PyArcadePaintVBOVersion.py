@@ -175,6 +175,7 @@ def on_mouse_drag(x, y, dx, dy, button, modifiers):
             if chosen_shape_row == 10:
                 drawing_width = 32
             elements.append(arcade.create_line(start_x, start_y, end_x, end_y, color=get_chosen_color(), line_width=drawing_width))
+            output_text.append(f"arcade.create_line({start_x}, {start_y}, {end_x}, {end_y}, color={get_chosen_color()}, line_width={drawing_width})")
             # elements.append(arcade.create_ellipse_filled(start_x, start_y, drawing_width, drawing_width, color=get_chosen_color()))
 
 def on_mouse_press(x, y, button, modifiers):
@@ -251,37 +252,35 @@ elements = None
 def on_update(delta_time):
     pass
 def on_draw():
-    arcade.start_render()
-    elements.draw()
-    # Drawing code here
 """)
 
-            for i in range(len(elements)):
-                print(elements[i])
-                # writer.write("    " + (elements[i]) + "\n")
-                # elements[i].x += 100
-                # elements[i].x1 += 100
+            for i in range(len(output_text)):
+                writer.write(f"    {output_text[i]}\n")
 
-            writer.write("\n \n")
-            writer.write("def on_key_press(key, modifiers): \n")
-            writer.write("    pass \n \n \n")
-            writer.write("def on_key_release(key, modifiers): \n")
-            writer.write("    pass \n \n \n")
-            writer.write("def on_mouse_press(x, y, button, modifiers): \n")
-            writer.write("    pass \n \n \n")
-            writer.write("def setup(): \n")
-            writer.write("    arcade.open_window(WIDTH, HEIGHT, \"My Arcade Game\") \n")
-            writer.write("    arcade.set_background_color(arcade.color.WHITE) \n")
-            writer.write("    arcade.schedule(on_update, 1/60) \n")
-            writer.write("    # Override arcade window methods \n")
-            writer.write("    window = arcade.get_window() \n")
-            writer.write("    window.on_draw = on_draw \n")
-            writer.write("    window.on_key_press = on_key_press \n")
-            writer.write("    window.on_key_release = on_key_release \n")
-            writer.write("    window.on_mouse_press = on_mouse_press \n")
-            writer.write("    arcade.run() \n \n \n")
-            writer.write("if __name__ == '__main__': \n")
-            writer.write("    setup() \n")
+            writer.write("""
+    arcade.start_render()
+    elements.draw()
+
+def on_key_press(key, modifiers):
+    pass
+def on_key_release(key, modifiers):
+    pass
+def on_mouse_press(x, y, button, modifiers):
+    pass
+def setup():
+    arcade.open_window(WIDTH, HEIGHT, \"My Arcade Game\")
+    arcade.set_background_color(arcade.color.WHITE) 
+    arcade.schedule(on_update, 1/60)
+    # Override arcade window methods n
+    window = arcade.get_window()
+    window.on_draw = on_draw
+    window.on_key_press = on_key_press
+    window.on_key_release = on_key_release
+    window.on_mouse_press = on_mouse_press
+    arcade.run()
+if __name__ == '__main__':
+    setup()
+""")
 
         chosen_color_column = 0
         chosen_color_row = 0
