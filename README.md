@@ -6,13 +6,13 @@ Finished, may receive future updates.
 ## Info
 PyArcadePaint is a python application that allows a user to draw something using a simple GUI, then convert it into python code with the single click of a button. This code will then be manually copied and pasted into an Arcade template in a .py file, which when run will draw the drawing the user drew in the GUI. It's simple, fast, and time-saving!
 
-## File Structure
-PyArcadePaint.py is the main program but runs at a very slow frame rate.<br/>
-PyArcadePaintVBOVersion.py has less features and hapes to draw, but draws at a much faster frame rate due to it's use of Vertex Buffer Objects.
-
 ## Dependencies
 [arcade python library](http://arcade.academy/) <br/>
 [pymsgbox python library](https://pymsgbox.readthedocs.io/en/latest/basics.html) <br/>
+
+## File Structure
+PyArcadePaint.py is the main program but runs at a very slow frame rate.<br/>
+PyArcadePaintVBOVersion.py has less features and hapes to draw, but draws at a much faster frame rate due to it's use of Vertex Buffer Objects.
 
 ## How To Use
 1. Run the program.<br/>
