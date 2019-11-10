@@ -241,101 +241,49 @@ def on_mouse_release(x, y, button, modifiers):
     elif x < 100 and 750 < y < 800:
         pass
         # Exports PyArcade python code into Exported_Code.py file
-        # with open('Exported_Code.py', 'w') as writer:
+        with open('Exported_Code.py', 'w') as writer:
+            writer.write("""import arcade
+WIDTH = 800
+HEIGHT = 800
+def on_update(delta_time):
+    pass
+def on_draw():
+    arcade.start_render()
+    # Drawing code here
+            """)
 
-        #     writer.write("import arcade \n \n")
-        #     writer.write("WIDTH = 800 \n")
-        #     writer.write("HEIGHT = 800 \n \n \n")
-        #     writer.write("def on_update(delta_time): \n")
-        #     writer.write("    pass \n \n \n")
-        #     writer.write("def on_draw(): \n")
-        #     writer.write("    arcade.start_render() \n")
-        #     writer.write("    # Drawing code here \n")
+            # for i in range(len(line_thin)):
+            #     writer.write("    " + LineThin.create_code(line_thin[i]) + "\n")
+            #     line_thin[i].x += 100
+            #     line_thin[i].x1 += 100
 
-        #     for i in range(len(rectangles_filled)):
-        #         writer.write("    " + RectangleFilled.create_code(rectangles_filled[i]) + "\n")
-        #         rectangles_filled[i].x += 100
-        #         rectangles_filled[i].x1 += 100
-        #     for i in range(len(rectangles_outline)):
-        #         writer.write("    " + RectangleOutline.create_code(rectangles_outline[i]) + "\n")
-        #         rectangles_outline[i].x += 100
-        #         rectangles_outline[i].x1 += 100
-        #     for i in range(len(circle_filled)):
-        #         writer.write("    " + CircleFilled.create_code(circle_filled[i]) + "\n")
-        #         circle_filled[i].x += 100
-        #         circle_filled[i].x1 += 100
-        #     for i in range(len(circle_outline)):
-        #         writer.write("    " + CircleOutline.create_code(circle_outline[i]) + "\n")
-        #         circle_outline[i].x += 100
-        #         circle_outline[i].x1 += 100
-        #     for i in range(len(ellipse_filled)):
-        #         writer.write("    " + EllipseFilled.create_code(ellipse_filled[i]) + "\n")
-        #         ellipse_filled[i].x += 100
-        #         ellipse_filled[i].x1 += 100
-        #     for i in range(len(ellipse_outline)):
-        #         writer.write("    " + EllipseOutline.create_code(ellipse_outline[i]) + "\n")
-        #         ellipse_outline[i].x += 100
-        #         ellipse_outline[i].x1 += 100
-        #     for i in range(len(triangle_filled)):
-        #         writer.write("    " + TriangleFilled.create_code(triangle_filled[i]) + "\n")
-        #         triangle_filled[i].x += 100
-        #         triangle_filled[i].x1 += 100
-        #     for i in range(len(triangle_outline)):
-        #         writer.write("    " + TriangleOutline.create_code(triangle_outline[i]) + "\n")
-        #         triangle_outline[i].x += 100
-        #         triangle_outline[i].x1 += 100
-        #     for i in range(len(arc_top_filled)):
-        #         writer.write("    " + ArcTopFilled.create_code(arc_top_filled[i]) + "\n")
-        #         arc_top_filled[i].x += 100
-        #         arc_top_filled[i].x1 += 100
-        #     for i in range(len(arc_top_outline)):
-        #         writer.write("    " + ArcTopOutline.create_code(arc_top_outline[i]) + "\n")
-        #         arc_top_outline[i].x += 100
-        #         arc_top_outline[i].x1 += 100
-        #     for i in range(len(arc_bottom_filled)):
-        #         writer.write("    " + ArcBottomFilled.create_code(arc_bottom_filled[i]) + "\n")
-        #         arc_bottom_filled[i].x += 100
-        #         arc_bottom_filled[i].x1 += 100
-        #     for i in range(len(arc_bottom_outline)):
-        #         writer.write("    " + ArcBottomOutline.create_code(arc_bottom_outline[i]) + "\n")
-        #         arc_bottom_outline[i].x += 100
-        #         arc_bottom_outline[i].x1 += 100
-        #     for i in range(len(line_thick)):
-        #         writer.write("    " + LineThick.create_code(line_thick[i]) + "\n")
-        #         line_thick[i].x += 100
-        #         line_thick[i].x1 += 100
-        #     for i in range(len(line_thin)):
-        #         writer.write("    " + LineThin.create_code(line_thin[i]) + "\n")
-        #         line_thin[i].x += 100
-        #         line_thin[i].x1 += 100
+            writer.write("\n \n")
+            writer.write("def on_key_press(key, modifiers): \n")
+            writer.write("    pass \n \n \n")
+            writer.write("def on_key_release(key, modifiers): \n")
+            writer.write("    pass \n \n \n")
+            writer.write("def on_mouse_press(x, y, button, modifiers): \n")
+            writer.write("    pass \n \n \n")
+            writer.write("def setup(): \n")
+            writer.write("    arcade.open_window(WIDTH, HEIGHT, \"My Arcade Game\") \n")
+            writer.write("    arcade.set_background_color(arcade.color.WHITE) \n")
+            writer.write("    arcade.schedule(on_update, 1/60) \n")
+            writer.write("    # Override arcade window methods \n")
+            writer.write("    window = arcade.get_window() \n")
+            writer.write("    window.on_draw = on_draw \n")
+            writer.write("    window.on_key_press = on_key_press \n")
+            writer.write("    window.on_key_release = on_key_release \n")
+            writer.write("    window.on_mouse_press = on_mouse_press \n")
+            writer.write("    arcade.run() \n \n \n")
+            writer.write("if __name__ == '__main__': \n")
+            writer.write("    setup() \n")
 
-        #     writer.write("\n \n")
-        #     writer.write("def on_key_press(key, modifiers): \n")
-        #     writer.write("    pass \n \n \n")
-        #     writer.write("def on_key_release(key, modifiers): \n")
-        #     writer.write("    pass \n \n \n")
-        #     writer.write("def on_mouse_press(x, y, button, modifiers): \n")
-        #     writer.write("    pass \n \n \n")
-        #     writer.write("def setup(): \n")
-        #     writer.write("    arcade.open_window(WIDTH, HEIGHT, \"My Arcade Game\") \n")
-        #     writer.write("    arcade.set_background_color(arcade.color.WHITE) \n")
-        #     writer.write("    arcade.schedule(on_update, 1/60) \n")
-        #     writer.write("    # Override arcade window methods \n")
-        #     writer.write("    window = arcade.get_window() \n")
-        #     writer.write("    window.on_draw = on_draw \n")
-        #     writer.write("    window.on_key_press = on_key_press \n")
-        #     writer.write("    window.on_key_release = on_key_release \n")
-        #     writer.write("    window.on_mouse_press = on_mouse_press \n")
-        #     writer.write("    arcade.run() \n \n \n")
-        #     writer.write("if __name__ == '__main__': \n")
-        #     writer.write("    setup() \n")
+        chosen_color_column = 0
+        chosen_color_row = 0
+        chosen_shape_column = 0
+        chosen_shape_row = 0
 
-        # chosen_color_column = 0
-        # chosen_color_row = 0
-        # chosen_shape_column = 0
-        # chosen_shape_row = 0
-
-        # pymsgbox.alert(text='You exported the drawing as Python Arcade code in Exported_Code.py in this project\'s folder. Run it and your drawing should appear. See the README.md on my GitHub repo for more details.', title='Successfully Exported!')
+        pymsgbox.alert(text='You exported the drawing as Python Arcade code in Exported_Code.py in this project\'s folder. Run it and your drawing should appear. See the README.md on my GitHub repo for more details.', title='Successfully Exported!')
 
 
 def setup():
