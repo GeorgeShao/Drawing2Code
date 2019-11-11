@@ -1,8 +1,5 @@
 # PyArcadePaint
 
-**Development State:**
-Finished, may receive future updates.
-
 ## Info
 PyArcadePaint is a python application that allows a user to draw something using a simple GUI, then convert it into python code with the single click of a button. This code will then be manually copied and pasted into an Arcade template in a .py file, which when run will draw the drawing the user drew in the GUI. It's simple, fast, and time-saving!
 
