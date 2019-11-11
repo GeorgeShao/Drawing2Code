@@ -11,10 +11,10 @@ PyArcadePaint is a python application that allows a user to draw something using
 [pymsgbox python library](https://pymsgbox.readthedocs.io/en/latest/basics.html) <br/>
 
 ## File Structure
-PyArcadePaint.py is the main program but runs at a very slow frame rate.<br/>
-PyArcadePaintVBOVersion.py has less features and hapes to draw, but draws at a much faster frame rate due to it's use of Vertex Buffer Objects.
+D2C_Modern.py is the modern and recommended program to use. it has less shapes than D2C_Legacy.py, but it runs significantly faster and at a much higher frame rate.
+D2C_Legacy.py is the legacy program. It has more shapes than D2C_Modern.py, but runs significantly slower and at a much slower frame rate.<br/>
 
-## How To Use
+## Usage
 1. Run the program.<br/>
 2. Choose a shape to draw on the toolbar on the left side of the screen. <br/>
 3. Choose a color to draw with on the toolbar on the left side of the screen. <br/>
