@@ -228,24 +228,24 @@ def on_mouse_release(x, y, button, modifiers):
         if chosen_shape_column == 1:
             if chosen_shape_row == 15:
                 elements.append(arcade.create_rectangle_filled((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), get_chosen_color()))
-                output_text.append(f"elements.append(arcade.create_rectangle_filled(({start_x}+{end_x})//2, ({start_y}+{end_y})//2, abs({end_x}-{start_x}), abs({end_y}-{start_y}), {get_chosen_color()}))")
+                output_text.append(f"elements.append(arcade.create_rectangle_filled(({start_x-100}+{end_x-100})//2, ({start_y}+{end_y})//2, abs({end_x-100}-{start_x-100}), abs({end_y}-{start_y}), {get_chosen_color()}))")
             if chosen_shape_row == 14:
                 radius = round(math.sqrt(abs(end_x-start_x)**2 + abs(end_y-start_y)**2))
                 elements.append(arcade.create_ellipse_filled(start_x, start_y, radius, radius, get_chosen_color()))
-                output_text.append(f"elements.append(arcade.create_ellipse_filled({start_x}, {start_y}, {radius}, {radius}, {get_chosen_color()}))")
+                output_text.append(f"elements.append(arcade.create_ellipse_filled({start_x-100}, {start_y}, {radius}, {radius}, {get_chosen_color()}))")
             if chosen_shape_row == 13:
                 elements.append(arcade.create_ellipse_filled(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), get_chosen_color()))
-                output_text.append(f"elements.append(arcade.create_ellipse_filled({start_x}, {start_y}, abs({end_x}-{start_x}), abs({end_y}-{start_y}), {get_chosen_color()}))")
+                output_text.append(f"elements.append(arcade.create_ellipse_filled({start_x-100}, {start_y}, abs({end_x}-{start_x}), abs({end_y}-{start_y}), {get_chosen_color()}))")
             if chosen_shape_row == 12:
                 elements.append(arcade.create_rectangle_outline((start_x+end_x)//2, (start_y+end_y)//2, abs(end_x-start_x), abs(end_y-start_y), get_chosen_color()))
-                output_text.append(f"elements.append(arcade.create_rectangle_outline(({start_x}+{end_x})//2, ({start_y}+{end_y})//2, abs({end_x}-{start_x}), abs({end_y}-{start_y}), {get_chosen_color()}))")
+                output_text.append(f"elements.append(arcade.create_rectangle_outline(({start_x-100}+{end_x-100})//2, ({start_y}+{end_y})//2, abs({end_x-100}-{start_x-100}), abs({end_y}-{start_y}), {get_chosen_color()}))")
             if chosen_shape_row == 11:
                 radius = round(math.sqrt(abs(end_x-start_x)**2 + abs(end_y-start_y)**2))
                 elements.append(arcade.create_ellipse_outline(start_x, start_y, radius, radius, get_chosen_color()))
-                output_text.append(f"elements.append(arcade.create_ellipse_outline({start_x}, {start_y}, {radius}, {radius}, {get_chosen_color()}))")
+                output_text.append(f"elements.append(arcade.create_ellipse_outline({start_x-100}, {start_y}, {radius}, {radius}, {get_chosen_color()}))")
             if chosen_shape_row == 10:
                 elements.append(arcade.create_ellipse_outline(start_x, start_y, abs(end_x-start_x), abs(end_y-start_y), get_chosen_color()))
-                output_text.append(f"elements.append(arcade.create_ellipse_outline({start_x}, {start_y}, abs({end_x}-{start_x}), abs({end_y}-{start_y}), {get_chosen_color()}))")
+                output_text.append(f"elements.append(arcade.create_ellipse_outline({start_x-100}, {start_y}, abs({end_x}-{start_x}), abs({end_y}-{start_y}), {get_chosen_color()}))")
                 
 
     elif x < 100 and 750 < y < 800:
