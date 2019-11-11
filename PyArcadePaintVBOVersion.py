@@ -175,7 +175,7 @@ def on_mouse_drag(x, y, dx, dy, button, modifiers):
             if chosen_shape_row == 10:
                 drawing_width = 32
             elements.append(arcade.create_line(start_x, start_y, end_x, end_y, color=get_chosen_color(), line_width=drawing_width))
-            output_text.append(f"elements.append(arcade.create_line({start_x}, {start_y}, {end_x}, {end_y}, color={get_chosen_color()}, line_width={drawing_width}))")
+            output_text.append(f"elements.append(arcade.create_line({start_x-100}, {start_y}, {end_x-100}, {end_y}, color={get_chosen_color()}, line_width={drawing_width}))")
             # elements.append(arcade.create_ellipse_filled(start_x, start_y, drawing_width, drawing_width, color=get_chosen_color()))
 
 def on_mouse_press(x, y, button, modifiers):
@@ -253,33 +253,34 @@ elements = None
 def on_update(delta_time):
     pass
 
+
 def on_draw():
-""")
-
-            for i in range(len(output_text)):
-                writer.write(f"    {output_text[i]}\n")
-
-            writer.write("""
     arcade.start_render()
     elements.draw()
+
 
 def on_key_press(key, modifiers):
     pass
 
+
 def on_key_release(key, modifiers):
     pass
+
 
 def on_mouse_drag(x, y, dx, dy, button, modifiers):
     pass
 
+
 def on_mouse_press(x, y, button, modifiers):
     pass
+
 
 def on_mouse_release(x, y, button, modifiers):
     pass
 
+
 def setup():
-    global elements, toolbar
+    global elements
 
     arcade.open_window(WIDTH, HEIGHT, "PyArcadePaint")
     arcade.set_background_color(arcade.color.WHITE)
@@ -291,6 +292,13 @@ def setup():
     elements.center_y = 0
     elements.angle = 0
 
+    # Drawing code here
+""")
+
+            for i in range(len(output_text)):
+                writer.write(f"    {output_text[i]}\n")
+
+            writer.write("""
     # Override arcade window methods
     window = arcade.get_window()
     window.on_draw = on_draw
@@ -300,6 +308,8 @@ def setup():
     window.on_mouse_release = on_mouse_release
     window.on_mouse_drag = on_mouse_drag
     arcade.run()
+
+
 if __name__ == '__main__':
     setup()
 """)

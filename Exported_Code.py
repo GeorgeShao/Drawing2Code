@@ -6,39 +6,31 @@ elements = None
 def on_update(delta_time):
     pass
 
-def on_draw():
-    elements.append(arcade.create_line(230, 421, 240, 424, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(245, 426, 260, 431, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(256, 429, 267, 432, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(268, 434, 280, 439, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(282, 438, 296, 442, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(299, 443, 316, 448, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(316, 450, 333, 457, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(335, 455, 354, 460, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(352, 461, 369, 467, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(358, 461, 364, 461, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(372, 467, 386, 473, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(376, 469, 380, 471, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(377, 470, 378, 471, color=(255, 0, 0), line_width=32))
-    elements.append(arcade.create_line(378, 471, 379, 472, color=(255, 0, 0), line_width=32))
 
+def on_draw():
     arcade.start_render()
     elements.draw()
+
 
 def on_key_press(key, modifiers):
     pass
 
+
 def on_key_release(key, modifiers):
     pass
+
 
 def on_mouse_drag(x, y, dx, dy, button, modifiers):
     pass
 
+
 def on_mouse_press(x, y, button, modifiers):
     pass
 
+
 def on_mouse_release(x, y, button, modifiers):
     pass
+
 
 def setup():
     global elements, toolbar
@@ -53,6 +45,17 @@ def setup():
     elements.center_y = 0
     elements.angle = 0
 
+    # Drawing code here
+    elements.append(arcade.create_line(209, 557, 217, 549, color=(255, 0, 0), line_width=32))
+    elements.append(arcade.create_line(217, 549, 225, 541, color=(255, 0, 0), line_width=32))
+    elements.append(arcade.create_line(226, 541, 235, 533, color=(255, 0, 0), line_width=32))
+    elements.append(arcade.create_line(283, 485, 340, 429, color=(255, 0, 0), line_width=32))
+    elements.append(arcade.create_line(294, 473, 305, 461, color=(255, 0, 0), line_width=32))
+    elements.append(arcade.create_line(314, 454, 334, 435, color=(255, 0, 0), line_width=32))
+    elements.append(arcade.create_line(323, 444, 332, 434, color=(255, 0, 0), line_width=32))
+    elements.append(arcade.create_line(340, 428, 357, 412, color=(255, 0, 0), line_width=32))
+    elements.append(arcade.create_line(342, 426, 344, 424, color=(255, 0, 0), line_width=32))
+
     # Override arcade window methods
     window = arcade.get_window()
     window.on_draw = on_draw
@@ -62,5 +65,7 @@ def setup():
     window.on_mouse_release = on_mouse_release
     window.on_mouse_drag = on_mouse_drag
     arcade.run()
+
+
 if __name__ == '__main__':
     setup()
