@@ -154,6 +154,7 @@ def on_key_press(key, modifiers):
 def on_key_release(key, modifiers):
     pass
 
+
 def on_mouse_drag(x, y, dx, dy, button, modifiers):
     if x > 100:
         currently_drawing = True
@@ -177,6 +178,7 @@ def on_mouse_drag(x, y, dx, dy, button, modifiers):
             elements.append(arcade.create_line(start_x, start_y, end_x, end_y, color=get_chosen_color(), line_width=drawing_width))
             output_text.append(f"elements.append(arcade.create_line({start_x-100}, {start_y}, {end_x-100}, {end_y}, color={get_chosen_color()}, line_width={drawing_width}))")
             # elements.append(arcade.create_ellipse_filled(start_x, start_y, drawing_width, drawing_width, color=get_chosen_color()))
+
 
 def on_mouse_press(x, y, button, modifiers):
     global chosen_color_column, chosen_shape_column, chosen_color_row, chosen_shape_row
@@ -253,6 +255,7 @@ def on_mouse_release(x, y, button, modifiers):
         # Exports PyArcade python code into Exported_Code.py file
         with open('Exported_Code.py', 'w') as writer:
             writer.write("""import arcade
+
 WIDTH = 800
 HEIGHT = 800
 elements = None
