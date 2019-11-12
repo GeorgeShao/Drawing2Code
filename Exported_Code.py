@@ -1,4 +1,5 @@
 import arcade
+
 WIDTH = 800
 HEIGHT = 800
 elements = None
