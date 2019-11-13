@@ -74,8 +74,14 @@ def on_draw():
 
     # Renders toolbar, all drawn shapes, and export button
     arcade.start_render()
-    elements.draw()
-    toolbar.draw()
+    try:
+        elements.draw()
+    except Exception as e:
+        print("ERROR:", e)
+    try:
+        toolbar.draw()
+    except Exception as e:
+        print("ERROR:", e)
     arcade.draw_text("EXPORT", 15, 765, color=arcade.color.BLACK, font_size=18)
 
 
@@ -148,8 +154,12 @@ def draw_toolbar_colors():
 
 
 def on_key_press(key, modifiers):
-    pass
-
+    global elements, output_text
+    if key == arcade.key.Z:
+        elements.remove(elements[-1])
+        output_text.pop()
+        print(len(elements), len(output_text))
+        
 
 def on_key_release(key, modifiers):
     pass
