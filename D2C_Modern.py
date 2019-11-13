@@ -65,6 +65,7 @@ def get_chosen_color():
             return arcade.color.RED_ORANGE
     return arcade.color.BLACK
 
+
 def on_update(delta_time):
     pass
 
