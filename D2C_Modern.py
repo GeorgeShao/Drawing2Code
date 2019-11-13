@@ -188,7 +188,6 @@ def on_mouse_drag(x, y, dx, dy, button, modifiers):
                 drawing_width = 32
             elements.append(arcade.create_line(start_x, start_y, end_x, end_y, color=get_chosen_color(), line_width=drawing_width))
             output_text.append(f"elements.append(arcade.create_line({start_x-100}, {start_y}, {end_x-100}, {end_y}, color={get_chosen_color()}, line_width={drawing_width}))")
-            # elements.append(arcade.create_ellipse_filled(start_x, start_y, drawing_width, drawing_width, color=get_chosen_color()))
 
 
 def on_mouse_press(x, y, button, modifiers):
