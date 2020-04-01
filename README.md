@@ -5,6 +5,7 @@ PyArcadePaint is a python application that allows a user to draw something using
 
 ## Dependencies
 [arcade python library](http://arcade.academy/) <br/>
+[arcadeplus python library](http://arcade.academy/) <br/>
 [pymsgbox python library](https://pymsgbox.readthedocs.io/en/latest/basics.html) <br/>
 
 ## File Structure
