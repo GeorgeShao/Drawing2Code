@@ -491,7 +491,7 @@ def on_mouse_press(x, y, button, modifiers):
 
 
 def on_mouse_release(x, y, button, modifiers):
-    global chosen_color_column, chosen_shape_column, chosen_color_row, chosen_shape_row, color, history_num
+    global chosen_color_column, chosen_shape_column, chosen_color_row, chosen_shape_row
     global currently_drawing, start_x, start_y, end_x, end_y
     global rectangles_filled, rectangles_outline, circle_filled, circle_outline, ellipse_filled, ellipse_outline, triangle_filled, triangle_outline, arc_top_filled, arc_top_outline, arc_bottom_filled, arc_bottom_outline, line_thick, line_thin
 
