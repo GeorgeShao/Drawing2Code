@@ -1,4 +1,4 @@
-import arcade
+import arcadeplus
 import pymsgbox
 
 # Window width & height
@@ -47,28 +47,28 @@ class RectangleFilled:
     def draw_shape(self):
         if self.x <= self.x1:
             if self.y <= self.y1:
-                arcade.draw_lrtb_rectangle_filled(self.x, self.x1, self.y1, self.y, self.color)
+                arcadeplus.draw_lrtb_rectangle_filled(self.x, self.x1, self.y1, self.y, self.color)
             elif self.y1 < self.y:
-                arcade.draw_lrtb_rectangle_filled(self.x, self.x1, self.y, self.y1, self.color)
+                arcadeplus.draw_lrtb_rectangle_filled(self.x, self.x1, self.y, self.y1, self.color)
         elif self.x1 < self.x:
             if self.y <= self.y1:
-                arcade.draw_lrtb_rectangle_filled(self.x1, self.x, self.y1, self.y, self.color)
+                arcadeplus.draw_lrtb_rectangle_filled(self.x1, self.x, self.y1, self.y, self.color)
             elif self.y1 < self.y:
-                arcade.draw_lrtb_rectangle_filled(self.x1, self.x, self.y, self.y1, self.color)
+                arcadeplus.draw_lrtb_rectangle_filled(self.x1, self.x, self.y, self.y1, self.color)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
         if self.x <= self.x1:
             if self.y <= self.y1:
-                return "arcade.draw_lrtb_rectangle_filled(" + str(self.x)+ ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.y) + ", " + str(self.color) + ")"
+                return "arcadeplus.draw_lrtb_rectangle_filled(" + str(self.x)+ ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.y) + ", " + str(self.color) + ")"
             elif self.y1 < self.y:
-                return "arcade.draw_lrtb_rectangle_filled(" + str(self.x) + ", " + str(self.x1) + ", " + str(self.y) + ", " + str(self.y1) + ", " + str(self.color) + ")"
+                return "arcadeplus.draw_lrtb_rectangle_filled(" + str(self.x) + ", " + str(self.x1) + ", " + str(self.y) + ", " + str(self.y1) + ", " + str(self.color) + ")"
         elif self.x1 < self.x:
             if self.y <= self.y1:
-                return "arcade.draw_lrtb_rectangle_filled(" + str(self.x1) + ", " + str(self.x) + ", " + str(self.y1) + ", " + str(self.y) + ", " + str(self.color) + ")"
+                return "arcadeplus.draw_lrtb_rectangle_filled(" + str(self.x1) + ", " + str(self.x) + ", " + str(self.y1) + ", " + str(self.y) + ", " + str(self.color) + ")"
             elif self.y1 < self.y:
-                return "arcade.draw_lrtb_rectangle_filled(" + str(self.x1) + ", " + str(self.x) + ", " + str(self.y) + ", " + str(self.y1) + ", " + str(self.color) + ")"
+                return "arcadeplus.draw_lrtb_rectangle_filled(" + str(self.x1) + ", " + str(self.x) + ", " + str(self.y) + ", " + str(self.y1) + ", " + str(self.color) + ")"
 
 
 class RectangleOutline:
@@ -82,28 +82,28 @@ class RectangleOutline:
     def draw_shape(self):
         if self.x <= self.x1:
             if self.y <= self.y1:
-                arcade.draw_lrtb_rectangle_outline(self.x, self.x1, self.y1, self.y, self.color)
+                arcadeplus.draw_lrtb_rectangle_outline(self.x, self.x1, self.y1, self.y, self.color)
             elif self.y1 < self.y:
-                arcade.draw_lrtb_rectangle_outline(self.x, self.x1, self.y, self.y1, self.color)
+                arcadeplus.draw_lrtb_rectangle_outline(self.x, self.x1, self.y, self.y1, self.color)
         elif self.x1 < self.x:
             if self.y <= self.y1:
-                arcade.draw_lrtb_rectangle_outline(self.x1, self.x, self.y1, self.y, self.color)
+                arcadeplus.draw_lrtb_rectangle_outline(self.x1, self.x, self.y1, self.y, self.color)
             elif self.y1 < self.y:
-                arcade.draw_lrtb_rectangle_outline(self.x1, self.x, self.y, self.y1, self.color)
+                arcadeplus.draw_lrtb_rectangle_outline(self.x1, self.x, self.y, self.y1, self.color)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
         if self.x <= self.x1:
             if self.y <= self.y1:
-                return "arcade.draw_lrtb_rectangle_outline(" + str(self.x)+ ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.y) + ", " + str(self.color) + ")"
+                return "arcadeplus.draw_lrtb_rectangle_outline(" + str(self.x)+ ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.y) + ", " + str(self.color) + ")"
             elif self.y1 < self.y:
-                return "arcade.draw_lrtb_rectangle_outline(" + str(self.x) + ", " + str(self.x1) + ", " + str(self.y) + ", " + str(self.y1) + ", " + str(self.color) + ")"
+                return "arcadeplus.draw_lrtb_rectangle_outline(" + str(self.x) + ", " + str(self.x1) + ", " + str(self.y) + ", " + str(self.y1) + ", " + str(self.color) + ")"
         elif self.x1 < self.x:
             if self.y <= self.y1:
-                return "arcade.draw_lrtb_rectangle_outline(" + str(self.x1) + ", " + str(self.x) + ", " + str(self.y1) + ", " + str(self.y) + ", " + str(self.color) + ")"
+                return "arcadeplus.draw_lrtb_rectangle_outline(" + str(self.x1) + ", " + str(self.x) + ", " + str(self.y1) + ", " + str(self.y) + ", " + str(self.color) + ")"
             elif self.y1 < self.y:
-                return "arcade.draw_lrtb_rectangle_outline(" + str(self.x1) + ", " + str(self.x) + ", " + str(self.y) + ", " + str(self.y1) + ", " + str(self.color) + ")"
+                return "arcadeplus.draw_lrtb_rectangle_outline(" + str(self.x1) + ", " + str(self.x) + ", " + str(self.y) + ", " + str(self.y1) + ", " + str(self.color) + ")"
 
 
 class CircleFilled:
@@ -120,7 +120,7 @@ class CircleFilled:
             radius = self.x1 - self.x
         elif abs(self.x1 - self.x) < abs(self.y1 - self.y):
             radius = self.y1 - self.y
-        arcade.draw_circle_filled(self.x, self.y, radius, self.color)
+        arcadeplus.draw_circle_filled(self.x, self.y, radius, self.color)
 
     def create_code(self):
         self.x -= 100
@@ -130,7 +130,7 @@ class CircleFilled:
             radius = self.x1 - self.x
         elif abs(self.x1 - self.x) < abs(self.y1 - self.y):
             radius = self.y1 - self.y
-        return "arcade.draw_circle_filled(" + str(self.x)+ ", " + str(self.y) + ", " + str(radius) + ", " + str(self.color) + ")"
+        return "arcadeplus.draw_circle_filled(" + str(self.x)+ ", " + str(self.y) + ", " + str(radius) + ", " + str(self.color) + ")"
 
 
 class CircleOutline:
@@ -147,7 +147,7 @@ class CircleOutline:
             radius = self.x1 - self.x
         elif abs(self.x1 - self.x) < abs(self.y1 - self.y):
             radius = self.y1 - self.y
-        arcade.draw_circle_outline(self.x, self.y, radius, self.color)
+        arcadeplus.draw_circle_outline(self.x, self.y, radius, self.color)
 
     def create_code(self):
         self.x -= 100
@@ -157,7 +157,7 @@ class CircleOutline:
             radius = self.x1 - self.x
         elif abs(self.x1 - self.x) < abs(self.y1 - self.y):
             radius = self.y1 - self.y
-        return "arcade.draw_circle_outline(" + str(self.x)+ ", " + str(self.y) + ", " + str(radius) + ", " + str(self.color) + ")"
+        return "arcadeplus.draw_circle_outline(" + str(self.x)+ ", " + str(self.y) + ", " + str(radius) + ", " + str(self.color) + ")"
 
 
 class EllipseFilled:
@@ -169,12 +169,12 @@ class EllipseFilled:
         self.color = color
 
     def draw_shape(self):
-        arcade.draw_ellipse_filled(self.x, self.y, int(abs(self.x1-self.x)), int(abs(self.y1-self.y)), self.color)
+        arcadeplus.draw_ellipse_filled(self.x, self.y, int(abs(self.x1-self.x)), int(abs(self.y1-self.y)), self.color)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
-        return "arcade.draw_ellipse_filled(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1-self.x))) + ", " + str(int(abs(self.y1-self.y))) + ", " + str(self.color) + ")"
+        return "arcadeplus.draw_ellipse_filled(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1-self.x))) + ", " + str(int(abs(self.y1-self.y))) + ", " + str(self.color) + ")"
 
 
 class EllipseOutline:
@@ -186,12 +186,12 @@ class EllipseOutline:
         self.color = color
 
     def draw_shape(self):
-        arcade.draw_ellipse_outline(self.x, self.y, int(abs(self.x1-self.x)), int(abs(self.y1-self.y)), self.color)
+        arcadeplus.draw_ellipse_outline(self.x, self.y, int(abs(self.x1-self.x)), int(abs(self.y1-self.y)), self.color)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
-        return "arcade.draw_ellipse_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1-self.x))) + ", " + str(int(abs(self.y1-self.y))) + ", " + str(self.color) + ")"
+        return "arcadeplus.draw_ellipse_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1-self.x))) + ", " + str(int(abs(self.y1-self.y))) + ", " + str(self.color) + ")"
 
 
 class TriangleFilled:
@@ -203,12 +203,12 @@ class TriangleFilled:
         self.color = color
 
     def draw_shape(self):
-        arcade.draw_triangle_filled(self.x, self.y, self.x1, self.y1, self.x - (self.x1 - self.x), self.y1, self.color)
+        arcadeplus.draw_triangle_filled(self.x, self.y, self.x1, self.y1, self.x - (self.x1 - self.x), self.y1, self.color)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
-        return "arcade.draw_triangle_filled(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(int(self.x - (self.x1 - self.x))) + ", " + str(self.y1) + ", " + str(self.color) + ")"
+        return "arcadeplus.draw_triangle_filled(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(int(self.x - (self.x1 - self.x))) + ", " + str(self.y1) + ", " + str(self.color) + ")"
 
 
 class TriangleOutline:
@@ -220,12 +220,12 @@ class TriangleOutline:
         self.color = color
 
     def draw_shape(self):
-        arcade.draw_triangle_outline(self.x, self.y, self.x1, self.y1, self.x - (self.x1 - self.x), self.y1, self.color)
+        arcadeplus.draw_triangle_outline(self.x, self.y, self.x1, self.y1, self.x - (self.x1 - self.x), self.y1, self.color)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
-        return "arcade.draw_triangle_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(int(self.x - (self.x1 - self.x))) + ", " + str(self.y1) + ", " + str(self.color) + ")"
+        return "arcadeplus.draw_triangle_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(int(self.x - (self.x1 - self.x))) + ", " + str(self.y1) + ", " + str(self.color) + ")"
 
 
 class ArcTopFilled:
@@ -237,12 +237,12 @@ class ArcTopFilled:
         self.color = color
 
     def draw_shape(self):
-        arcade.draw_arc_filled(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 0, 180)
+        arcadeplus.draw_arc_filled(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 0, 180)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
-        return "arcade.draw_arc_filled(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 0, 180)"
+        return "arcadeplus.draw_arc_filled(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 0, 180)"
 
 
 class ArcTopOutline:
@@ -254,12 +254,12 @@ class ArcTopOutline:
         self.color = color
 
     def draw_shape(self):
-        arcade.draw_arc_outline(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 0, 180)
+        arcadeplus.draw_arc_outline(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 0, 180)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
-        return "arcade.draw_arc_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 0, 180)"
+        return "arcadeplus.draw_arc_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 0, 180)"
 
 
 class ArcBottomFilled:
@@ -271,12 +271,12 @@ class ArcBottomFilled:
         self.color = color
 
     def draw_shape(self):
-        arcade.draw_arc_filled(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 180, 360)
+        arcadeplus.draw_arc_filled(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 180, 360)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
-        return "arcade.draw_arc_filled(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 180, 360)"
+        return "arcadeplus.draw_arc_filled(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 180, 360)"
 
 
 class ArcBottomOutline:
@@ -288,12 +288,12 @@ class ArcBottomOutline:
         self.color = color
 
     def draw_shape(self):
-        arcade.draw_arc_outline(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 180, 360)
+        arcadeplus.draw_arc_outline(self.x, self.y, int(abs(self.x1 - self.x)), int(abs(self.y1 - self.y)), self.color, 180, 360)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
-        return "arcade.draw_arc_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 180, 360)"
+        return "arcadeplus.draw_arc_outline(" + str(self.x) + ", " + str(self.y) + ", " + str(int(abs(self.x1 - self.x))) + ", " + str(int(abs(self.y1 - self.y))) + ", " + str(self.color) + ", 180, 360)"
 
 
 class LineThick:
@@ -305,12 +305,12 @@ class LineThick:
         self.color = color
 
     def draw_shape(self):
-        arcade.draw_line(self.x, self.y, self.x1, self.y1, self.color, line_width=5)
+        arcadeplus.draw_line(self.x, self.y, self.x1, self.y1, self.color, line_width=5)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
-        return "arcade.draw_line(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.color) + ", line_width=5)"
+        return "arcadeplus.draw_line(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.color) + ", line_width=5)"
 
 
 class LineThin:
@@ -322,12 +322,12 @@ class LineThin:
         self.color = color
 
     def draw_shape(self):
-        arcade.draw_line(self.x, self.y, self.x1, self.y1, self.color, line_width=2)
+        arcadeplus.draw_line(self.x, self.y, self.x1, self.y1, self.color, line_width=2)
 
     def create_code(self):
         self.x -= 100
         self.x1 -= 100
-        return "arcade.draw_line(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.color) + ", line_width=2)"
+        return "arcadeplus.draw_line(" + str(self.x) + ", " + str(self.y) + ", " + str(self.x1) + ", " + str(self.y1) + ", " + str(self.color) + ", line_width=2)"
 
 
 def on_update(delta_time):
@@ -335,7 +335,7 @@ def on_update(delta_time):
 
 
 def on_draw():
-    arcade.start_render()
+    arcadeplus.start_render()
 
     global rectangles_filled, rectangles_outline, circle_filled, circle_outline, ellipse_filled, ellipse_outline, triangle_filled, triangle_outline, arc_top_filled, arc_top_outline, arc_bottom_filled, arc_bottom_outline, line_thick, line_thin
 
@@ -377,71 +377,71 @@ def on_draw():
 
 def draw_toolbar_dividers():
     # Draw toolbar outline
-    arcade.draw_xywh_rectangle_filled(0, 0, 100, 800, arcade.color.TROLLEY_GREY)  # background
-    arcade.draw_line(100, 0, 100, 800, arcade.color.BLACK)  # right border
-    arcade.draw_line(1, 1, 1, 800, arcade.color.BLACK)  # left border
-    arcade.draw_line(0, 0, 100, 0, arcade.color.BLACK)  # bottom border
-    arcade.draw_line(1, 799, 100, 799, arcade.color.BLACK)  # top border
+    arcadeplus.draw_xywh_rectangle_filled(0, 0, 100, 800, arcadeplus.color.TROLLEY_GREY)  # background
+    arcadeplus.draw_line(100, 0, 100, 800, arcadeplus.color.BLACK)  # right border
+    arcadeplus.draw_line(1, 1, 1, 800, arcadeplus.color.BLACK)  # left border
+    arcadeplus.draw_line(0, 0, 100, 0, arcadeplus.color.BLACK)  # bottom border
+    arcadeplus.draw_line(1, 799, 100, 799, arcadeplus.color.BLACK)  # top border
 
     # Draw toolbar divider
-    arcade.draw_line(50, 0, 50, 750, arcade.color.BLACK)  # middle divider
+    arcadeplus.draw_line(50, 0, 50, 750, arcadeplus.color.BLACK)  # middle divider
 
     # Draw toolbar mini dividers
     for i in range(0, 800, 50):
-        arcade.draw_line(0, i, 100, i, arcade.color.BLACK)
+        arcadeplus.draw_line(0, i, 100, i, arcadeplus.color.BLACK)
 
 
 def draw_toolbar_shapes():
     # Export button
-    arcade.draw_text("EXPORT", 15, 765, arcade.color.BLACK, font_size=18)
+    arcadeplus.draw_text("EXPORT", 15, 765, arcadeplus.color.BLACK, font_size=18)
 
     # Draw rectangles
-    arcade.draw_rectangle_filled(25, 725, 35, 15, arcade.color.BLUE)
-    arcade.draw_rectangle_outline(75, 725, 35, 15, arcade.color.BLUE)
+    arcadeplus.draw_rectangle_filled(25, 725, 35, 15, arcadeplus.color.BLUE)
+    arcadeplus.draw_rectangle_outline(75, 725, 35, 15, arcadeplus.color.BLUE)
 
     # Draw circles
-    arcade.draw_circle_filled(25, 675, 13, arcade.color.BLUE)
-    arcade.draw_circle_outline(75, 675, 13, arcade.color.BLUE)
+    arcadeplus.draw_circle_filled(25, 675, 13, arcadeplus.color.BLUE)
+    arcadeplus.draw_circle_outline(75, 675, 13, arcadeplus.color.BLUE)
 
     # Draw ellipses
-    arcade.draw_ellipse_filled(25, 625, 18, 8, arcade.color.BLUE)
-    arcade.draw_ellipse_outline(75, 625, 18, 8, arcade.color.BLUE)
+    arcadeplus.draw_ellipse_filled(25, 625, 18, 8, arcadeplus.color.BLUE)
+    arcadeplus.draw_ellipse_outline(75, 625, 18, 8, arcadeplus.color.BLUE)
 
     # Draw triangles
-    arcade.draw_triangle_filled(25, 590, 10, 560, 40, 560, arcade.color.BLUE)
-    arcade.draw_triangle_outline(75, 590, 60, 560, 90, 560, arcade.color.BLUE)
+    arcadeplus.draw_triangle_filled(25, 590, 10, 560, 40, 560, arcadeplus.color.BLUE)
+    arcadeplus.draw_triangle_outline(75, 590, 60, 560, 90, 560, arcadeplus.color.BLUE)
 
     # Draw arc tops (to symbolize arc tops & bottoms)
-    arcade.draw_arc_filled(25, 520, 15, 15, arcade.color.BLUE, 0, 180)
-    arcade.draw_arc_outline(75, 520, 15, 15, arcade.color.BLUE, 0, 180)
+    arcadeplus.draw_arc_filled(25, 520, 15, 15, arcadeplus.color.BLUE, 0, 180)
+    arcadeplus.draw_arc_outline(75, 520, 15, 15, arcadeplus.color.BLUE, 0, 180)
 
     # Draw lines
-    arcade.draw_line(10, 460, 40, 490, arcade.color.BLUE, line_width=2)
-    arcade.draw_line(60, 460, 90, 490, arcade.color.BLUE, line_width=1)
+    arcadeplus.draw_line(10, 460, 40, 490, arcadeplus.color.BLUE, line_width=2)
+    arcadeplus.draw_line(60, 460, 90, 490, arcadeplus.color.BLUE, line_width=1)
 
 
 def draw_toolbar_colors():
     # First column of colors
-    arcade.draw_rectangle_filled(25, 425, 50, 50, arcade.color.RED)
-    arcade.draw_rectangle_filled(25, 375, 50, 50, arcade.color.ORANGE)
-    arcade.draw_rectangle_filled(25, 325, 50, 50, arcade.color.YELLOW)
-    arcade.draw_rectangle_filled(25, 275, 50, 50, arcade.color.GREEN)
-    arcade.draw_rectangle_filled(25, 225, 50, 50, arcade.color.BLUE)
-    arcade.draw_rectangle_filled(25, 175, 50, 50, arcade.color.PURPLE)
-    arcade.draw_rectangle_filled(25, 125, 50, 50, arcade.color.VIOLET)
-    arcade.draw_rectangle_filled(25, 75, 50, 50, arcade.color.WHITE)
-    arcade.draw_rectangle_filled(25, 25, 50, 50, arcade.color.BLACK)
+    arcadeplus.draw_rectangle_filled(25, 425, 50, 50, arcadeplus.color.RED)
+    arcadeplus.draw_rectangle_filled(25, 375, 50, 50, arcadeplus.color.ORANGE)
+    arcadeplus.draw_rectangle_filled(25, 325, 50, 50, arcadeplus.color.YELLOW)
+    arcadeplus.draw_rectangle_filled(25, 275, 50, 50, arcadeplus.color.GREEN)
+    arcadeplus.draw_rectangle_filled(25, 225, 50, 50, arcadeplus.color.BLUE)
+    arcadeplus.draw_rectangle_filled(25, 175, 50, 50, arcadeplus.color.PURPLE)
+    arcadeplus.draw_rectangle_filled(25, 125, 50, 50, arcadeplus.color.VIOLET)
+    arcadeplus.draw_rectangle_filled(25, 75, 50, 50, arcadeplus.color.WHITE)
+    arcadeplus.draw_rectangle_filled(25, 25, 50, 50, arcadeplus.color.BLACK)
 
     # Second column of colors
-    arcade.draw_rectangle_filled(75, 425, 50, 50, arcade.color.RED_ORANGE)
-    arcade.draw_rectangle_filled(75, 375, 50, 50, arcade.color.FLUORESCENT_ORANGE)
-    arcade.draw_rectangle_filled(75, 325, 50, 50, arcade.color.FLUORESCENT_YELLOW)
-    arcade.draw_rectangle_filled(75, 275, 50, 50, arcade.color.YELLOW_GREEN)
-    arcade.draw_rectangle_filled(75, 225, 50, 50, arcade.color.AIR_SUPERIORITY_BLUE)
-    arcade.draw_rectangle_filled(75, 175, 50, 50, arcade.color.FUCHSIA_PURPLE)
-    arcade.draw_rectangle_filled(75, 125, 50, 50, arcade.color.BLUE_VIOLET)
-    arcade.draw_rectangle_filled(75, 75, 50, 50, arcade.color.WHITE_SMOKE)
-    arcade.draw_rectangle_filled(75, 25, 50, 50, arcade.color.ASH_GREY)
+    arcadeplus.draw_rectangle_filled(75, 425, 50, 50, arcadeplus.color.RED_ORANGE)
+    arcadeplus.draw_rectangle_filled(75, 375, 50, 50, arcadeplus.color.FLUORESCENT_ORANGE)
+    arcadeplus.draw_rectangle_filled(75, 325, 50, 50, arcadeplus.color.FLUORESCENT_YELLOW)
+    arcadeplus.draw_rectangle_filled(75, 275, 50, 50, arcadeplus.color.YELLOW_GREEN)
+    arcadeplus.draw_rectangle_filled(75, 225, 50, 50, arcadeplus.color.AIR_SUPERIORITY_BLUE)
+    arcadeplus.draw_rectangle_filled(75, 175, 50, 50, arcadeplus.color.FUCHSIA_PURPLE)
+    arcadeplus.draw_rectangle_filled(75, 125, 50, 50, arcadeplus.color.BLUE_VIOLET)
+    arcadeplus.draw_rectangle_filled(75, 75, 50, 50, arcadeplus.color.WHITE_SMOKE)
+    arcadeplus.draw_rectangle_filled(75, 25, 50, 50, arcadeplus.color.ASH_GREY)
 
 
 def on_key_press(key, modifiers):
@@ -504,42 +504,42 @@ def on_mouse_release(x, y, button, modifiers):
         # Determines what color user has chosen
         if chosen_color_column == 1:
             if chosen_color_row == 1:
-                color = arcade.color.BLACK
+                color = arcadeplus.color.BLACK
             if chosen_color_row == 2:
-                color = arcade.color.WHITE
+                color = arcadeplus.color.WHITE
             if chosen_color_row == 3:
-                color = arcade.color.VIOLET
+                color = arcadeplus.color.VIOLET
             if chosen_color_row == 4:
-                color = arcade.color.PURPLE
+                color = arcadeplus.color.PURPLE
             if chosen_color_row == 5:
-                color = arcade.color.BLUE
+                color = arcadeplus.color.BLUE
             if chosen_color_row == 6:
-                color = arcade.color.GREEN
+                color = arcadeplus.color.GREEN
             if chosen_color_row == 7:
-                color = arcade.color.YELLOW
+                color = arcadeplus.color.YELLOW
             if chosen_color_row == 8:
-                color = arcade.color.ORANGE
+                color = arcadeplus.color.ORANGE
             if chosen_color_row == 9:
-                color = arcade.color.RED
+                color = arcadeplus.color.RED
         if chosen_color_column == 2:
             if chosen_color_row == 1:
-                color = arcade.color.ASH_GREY
+                color = arcadeplus.color.ASH_GREY
             if chosen_color_row == 2:
-                color = arcade.color.WHITE_SMOKE
+                color = arcadeplus.color.WHITE_SMOKE
             if chosen_color_row == 3:
-                color = arcade.color.BLUE_VIOLET
+                color = arcadeplus.color.BLUE_VIOLET
             if chosen_color_row == 4:
-                color = arcade.color.FUCHSIA_PURPLE
+                color = arcadeplus.color.FUCHSIA_PURPLE
             if chosen_color_row == 5:
-                color = arcade.color.AIR_SUPERIORITY_BLUE
+                color = arcadeplus.color.AIR_SUPERIORITY_BLUE
             if chosen_color_row == 6:
-                color = arcade.color.YELLOW_GREEN
+                color = arcadeplus.color.YELLOW_GREEN
             if chosen_color_row == 7:
-                color = arcade.color.FLUORESCENT_YELLOW
+                color = arcadeplus.color.FLUORESCENT_YELLOW
             if chosen_color_row == 8:
-                color = arcade.color.FLUORESCENT_ORANGE
+                color = arcadeplus.color.FLUORESCENT_ORANGE
             if chosen_color_row == 9:
-                color = arcade.color.RED_ORANGE
+                color = arcadeplus.color.RED_ORANGE
 
         # Determines & adds shape to object list
         if chosen_shape_column == 1:
@@ -579,7 +579,7 @@ def on_mouse_release(x, y, button, modifiers):
     elif x < 100 and 750 < y < 800:
         # Exports PyArcade python code into Exported_Code.py file
         with open('Exported_Code.py', 'w') as writer:
-            writer.write("""import arcade
+            writer.write("""import arcadeplus
 
 WIDTH = 800
 HEIGHT = 800
@@ -589,7 +589,7 @@ def on_update(delta_time):
 
 
 def on_draw():
-    arcade.start_render()
+    arcadeplus.start_render()
     
     # Drawing code here
 """)
@@ -666,17 +666,17 @@ def on_mouse_press(x, y, button, modifiers):
 
 
 def setup():
-    arcade.open_window(WIDTH, HEIGHT, \"My Arcade Game\")
-    arcade.set_background_color(arcade.color.WHITE)
-    arcade.schedule(on_update, 1/60)
+    arcadeplus.open_window(WIDTH, HEIGHT, \"My Arcade Game\")
+    arcadeplus.set_background_color(arcadeplus.color.WHITE)
+    arcadeplus.schedule(on_update, 1/60)
 
     # Override arcade window methods
-    window = arcade.get_window()
+    window = arcadeplus.get_window()
     window.on_draw = on_draw
     window.on_key_press = on_key_press
     window.on_key_release = on_key_release
     window.on_mouse_press = on_mouse_press
-    arcade.run()
+    arcadeplus.run()
 
 
 if __name__ == '__main__':
@@ -692,19 +692,19 @@ if __name__ == '__main__':
 
 
 def setup():
-    arcade.open_window(WIDTH, HEIGHT, "PyArcadePaint")
-    arcade.set_background_color(arcade.color.WHITE)
-    arcade.schedule(on_update, 1/1000000)
+    arcadeplus.open_window(WIDTH, HEIGHT, "PyArcadePaint")
+    arcadeplus.set_background_color(arcadeplus.color.WHITE)
+    arcadeplus.schedule(on_update, 1/1000000)
 
     # Override arcade window methods
-    window = arcade.get_window()
+    window = arcadeplus.get_window()
     window.on_draw = on_draw
     window.on_key_press = on_key_press
     window.on_key_release = on_key_release
     window.on_mouse_press = on_mouse_press
     window.on_mouse_release = on_mouse_release
 
-    arcade.run()
+    arcadeplus.run()
 
 
 if __name__ == '__main__':

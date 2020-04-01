@@ -10,6 +10,7 @@ PyArcadePaint is a python application that allows a user to draw something using
 ## File Structure
 D2C_Modern.py is the modern and recommended program to use. it has less shapes than D2C_Legacy.py, but it runs significantly faster and at a much higher frame rate.
 D2C_Legacy.py is the legacy program. It has more shapes than D2C_Modern.py, but runs significantly slower and at a much slower frame rate.<br/>
+D2C_LegacyPlus.py is the legacy program but with drastic performance improvements through the use of the ArcadePlus library instead of the Arcade Library.<br/>
 
 ## Usage
 1. Run the program.<br/>

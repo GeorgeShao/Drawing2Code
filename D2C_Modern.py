@@ -347,7 +347,7 @@ def setup():
 
     arcade.open_window(WIDTH, HEIGHT, "PyArcadePaint")
     arcade.set_background_color(arcade.color.WHITE)
-    arcade.schedule(on_update, 1/60)
+    arcade.schedule(on_update, 1/1000000)
 
     # Shape shape list
     elements = arcade.ShapeElementList()
